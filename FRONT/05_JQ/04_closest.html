@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            .ancestors *{
+                border: 2px solid red;
+                padding : 5px;
+                margin: 15px;
+                display : block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class = "ancesotrs">
+            <div>
+                <ul>
+                    <li>
+                        <span id = "item">SPAN</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </body>
+    <script>// 부모 찾는 방식보다 자식 찾는 방식 선호
+        //parents : 특정 부모값을 올라가면서 찾는다.(복수)
+        console.log($('#item').parents('div'));
+        //closest : 특정 부모값 중 '가장 먼저 검색되는 요소'를 찾는다.(단수)
+        console.log($('#item').closest('div'));
+
+    </script>
+</html>

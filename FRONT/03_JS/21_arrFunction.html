@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+        <link rel="icon" href="../img/chrome.png">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <button onclick = "arrPush()">push</button>
+        <button onclick = "arrPop()">pop</button>
+        <button onclick = "arrUnshift()">unshift</button>
+        <button onclick = "arrShift()">shift</button>
+        <hr/>
+        <button onclick = "arrSlice()">slice</button>
+        <button onclick = "arrSpliceDel()">splice-Del</button>
+        <button onclick = "arrSpliceAdd()">splice-Add</button>
+        <hr/>
+        <button onclick = "arrConcat()">concat</button>
+        <button onclick = "arrDelete()">delete</button>
+        <button onclick = "arrJoin()">join</button>
+
+    </body>
+    <script>
+        //js에서는 배열을 편리하게 사용하기 위한 함수를 제공한다.
+        var arr = [];
+        var i = 1;
+
+        function arrPush(){//값을 뒤쪽에 순차적으로 넣는다.
+            arr.push(i);
+            i++;
+            console.log(arr);
+        }
+        function arrPop(){ //값을 뒤쪽에서부터 순차적으로 뺀다.
+            var val = arr.pop();
+            console.log(val,arr);
+        } 
+        function arrUnshift(){ //값을 앞으로 넣는다(Un들어갔다고 뺀다고 생각하지 x)
+            arr.unshift(i);
+            i++;
+            console.log(arr);
+        }
+        function arrShift(){ //값을 앞에서부터 순차적으로 뺀다.
+            arr.shift(i);
+            i++;
+            console.log(arr);
+        }
+
+        //범위 가져오기
+        function arrSlice(){
+            //slice(몇번부터가져오고, 몇번부터 버릴까)
+            arr = [0,1,2,3,4,5]
+            console.log(arr);
+            var newArr = arr.slice(1,3); //1번부터 가져오고 "3번부터 버려라!!!"
+            console.log(newArr); //원본 배열은 보존된다.
+            console.log(arr);
+        }
+
+        var strArr = ['마', '가', '다', '바', '나', '라']
+        function arrSpliceDel(){
+            var sortArr = strArr.sort();
+            console.log(sortArr);
+            //arrSpliceDel()
+            sortArr.splice(2,2); //원본을 변경한다
+            console.log(sortArr);
+        }
+        function arrSpliceAdd(){
+            var sortArr = strArr.sort();
+            console.log(sortArr);
+            //arrSpliceAdd(해당인덱스 부터, 삭제할 갯수, 추가할 값)
+            //sortArr.splice(2,0,'A','B','C');
+            //다,라,마 -> A,B,C
+            sortArr.splice(2,3,'A','B','C');
+            console.log(sortArr);
+        }
+
+        //배열 합치기
+        function arrConcat(){
+            //newArr = arry1.concat(arry2,arry3,arry4,...)
+            var arr1 = [1,2,3,4,5];
+            var arr2 = ['A', 'B', 'C', 'D'];
+            var arr3 = ['b', 'B', 'C', 'D'];
+            var totalArr = arr1.concat(arr2,arr3);
+            console.log(totalArr);
+
+        }
+
+        //배열의 특정 인덱스를 삭제(잘안씀)
+        function arrDelete(){
+            delete arr[2]; //권장하지 않음
+            console.log(arr);
+            arr[2] ='new';
+            console.log(arr);
+
+        }
+
+        //
+        function arrJoin(){
+            console.log(arr);
+            console.log(arr.valueOf());
+            console.log(arr.join('_'));
+        }
+        
+    </script>
+</html>

@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+        <style>
+            div{
+                width: 250px;
+                height: 250px;
+                background-color: yellowgreen;
+            }
+        </style>
+    </head>
+    <!-- html문서가 모두 읽히면 일어나는 이벤트 -->
+    <body onload = "alert('loading 끝')">
+        <!-- 한 요소에 다수의 이벤트를 걸 수 있다-->
+        <div onmouseover = "mouseEvt('over')" onmouseout="mouseEvt('out')"></div>
+        <br/>
+        <!-- span : inline 속성을 가지고 있는 div - 특정 문자열 지정-->
+        <h3>오늘의 날짜 : <span id = "demo"></span></h3>
+        <input type = "button" value = "날짜추출" onclick="getDay(event)"/>
+        <br/>
+        <input type = "text" id = "keyon" value="" onkeydown="going()"/>
+        <input type = "text" id = "keyup" value="" onkeyup="typing()"/>
+        <h4 id ="typing"></h4>
+        <select id = "mySelect" onchange="select()">
+            <option value = "Audi">Audi</option>
+            <option value = "BMW">BMW</option>
+            <option value = "Benz">Benz</option>
+        </select>
+
+
+    </body>
+    <script>
+        //해당 요소에 걸수 있는 이벤트 목록을 볼 수 있다.(on..)
+        var elem = document.getElementsByTagName('body');
+        console.log(elem);
+
+        function mouseEvt(flag){
+            console.log(flag);
+            var tag = document.getElementsByTagName('div');
+            tag[0].innerHTML = 'mouse ' + flag;
+            if(flag == 'over'){
+                tag[0].style.backgroundColor = 'red';
+            } else{
+                tag[0].style.backgroundColor = 'yellow';
+            }
+        }
+
+        function getDay(evt){
+            // 이벤트 발생시 이벤트에 관련된 모든 정보를 이벤트 객체로 전달해 준다.
+            console.log(evt);
+            
+            // var span = document.getElementById('demo'); //스판 태그를 가져온다
+            // span.innerHTML = Date();
+            
+            var date = Date();
+            var span = document.getElementById('demo');
+            span.innerHTML = date;
+            console.log([span]);
+        }
+
+        function going(){
+            // console.log('key down');
+            // 키를 누르는 순간에 이벤트가 발생하여
+            // input에 value가 입력되기 전에 값을 가져오려고 한다.
+            // 그래서 한박자씩 느리게 반응하는 것으로 보인다. 다음꺼 입력해야 기존입력값 나옴
+            // 누르는거 자체를 감지하는데 사용. 타이핑에는 부적합
+            var val = document.getElementById('keyon').value;
+            console.log(val);
+
+        }
+
+        function typing(){
+            var val = document.getElementById('keyup').value;
+            console.log(val);
+
+            /*var typing = document.getElementById('typing');
+            typing.innerHTML = val;*/
+
+            document.getElementById('typing').innerHTML = val;
+            
+        }
+
+        function select(){ //이벤트걸고 -> 함수실행되나보고 -> 원하는태그가져오나보고 -> 특정요소 고쳤을때 제대로 고쳐지는지 확인( 이벤트에서는 이게 제일중요!)
+            console.log('change'); // 1단계 : 이벤트 발생시 함수 호출 여부
+            // 2단계 : 원하는 태그가 가져와 졌는지 확인
+            var elem = document.getElementById('mySelect');
+            console.log(elem); // 단계별로 확인하기위해 두줄로 표현한것
+            // 3단계 : 원하는 속성(가져오기|수정하기)
+            var val = elem.value;
+            console.log(val);
+            document.getElementById('typing').innerHTML = val;
+
+        }
+
+
+    </script>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+        <link rel="icon" href="../img/chrome.png">
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+    </body>
+    <script>// 종종 중요한 스크립트는 헤드에들어감
+        var x = 10;
+        var y = 10;
+
+        x++; //증가가 나중에
+        ++y; //증가가 먼저
+
+        console.log('x : ', x);
+        console.log('y : ', y);
+        console.log('____________')
+        x = 1;
+        y = 1;
+        var result = (++x) + 10;
+        var result2 = (y++) + 10;
+        console.log('result : ', result); //x가 먼저 증가해서 2가되고 이후 10을 더함
+        console.log('result2 : ', result2); // y와 10을 먼저 더하고 이후 y는 1 증가
+
+        // ++가 뒤에 붙는 경우는 무언가 행해지고 나서 증가하는 경우
+        // 특정한 액션 후에 카운트 할때 사용된다.
+
+        // 반전 연산은 온/오프가 연속적으로 일어나는 경우 유용하다.
+        var yn = true;
+        console.log('YN : ', yn);
+        yn=!yn;
+        console.log('YN : ', yn);
+    </script>
+</html>

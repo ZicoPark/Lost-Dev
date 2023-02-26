@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            #obj{
+                width : 100px;
+                height : 100px;
+                position: absolute;
+                left : 5px;
+                margin : 5px;
+                background-color: blue;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <button id="left">left</button>
+        <button id="right">right</button>
+        <button id="stop">stop</button>
+        <button id="special">special</button>
+        <button id="step">step</button>
+        <div id = "obj"></div>
+
+    </body>
+    <script>//animate({css에서 정의할 수 있는 속성들}, 스피드, easing(가속효과?),callback)
+        $('#right').on('click', function(){
+            //{css '최종'결과},속도,가속
+            $('#obj').animate({'left': '+=500'},'slow','swing') //여러개 가능 //누적합을 써야 이렇게 200씩 지속적으로 간다.콜백안쓴거임
+        });
+
+        $('#left').on('click', function(){
+            $('#obj').animate({'left': '-=500'},'slow','swing') //여러개 가능 //누적합을 써야 이렇게 200씩 지속적으로 간다.콜백안쓴거임
+        });
+
+        $('#stop').on('click', function(){
+            $('#obj').stop();
+        });
+
+        $('#special').on('click', function(){
+            $('#obj').animate({
+                'left':'+=500',
+                'width' : '-=50',
+                'height' : '-=50',
+                'opacity' : '-=0.5'
+            },5000,'linear',function(){
+                alert('애니메이션 끝');
+            });
+        });
+
+        $('#step').on('click',function(){
+            $('#obj').animate({'left':'+=500'},'slow')
+                .animate({'top':'+=500'},'slow')
+                .animate({'left':'-=500'},'slow')
+                .animate({'top':'-=500'},'slow');
+        });
+
+    </script>
+</html>

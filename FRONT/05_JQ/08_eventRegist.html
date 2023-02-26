@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <button id="btn">버튼 생성</button>
+        <button id="evtDel">이벤트 삭제</button>
+
+    </body>
+    <script>
+        //$(selector).on('이벤트', 실행함수);        
+        $('#btn').on('click',function(){ //append 추가하다
+            $('body').append('<button onclick="clickEvt()">click</button>'); //가장추천하는방식. 속성으로 쓰기.
+            $('body').append('<button class ="newBtn2">click2</button>');
+        });
+
+        //$(selector).이벤트(실행함수);
+        $('#evtDel').click(function(){
+            //$(selector).off('이벤트');
+            $('#btn').off('click');
+        });
+
+        //.newBtn2에 클릭 이벤트 걸기
+        // 존재하지 않는 상태의 요소에 이벤트를 걸 수 없다.
+        // $('#newBtn2').on('click',function(){
+        //     alert('click!!!');
+        // });
+
+        //나중에 생기는 요소에 이벤트 걸기1(이거하는게 나음)
+        function clickEvt(){
+            alert('CLICK!!');
+        };
+
+        //나중에 생기는 요소에 이벤트 걸기2(전체 html중에 특수한경우에 동작)
+        $(document).on('click', '.newBtn2', function(){
+            alert('click!!!');
+        });
+
+    </script>
+</html>

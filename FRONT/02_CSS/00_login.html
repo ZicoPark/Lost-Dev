@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            table, td, th{
+                border:2px solid black;
+                border-collapse: collapse;
+            }
+            th,td{
+                padding: 10px;
+            }
+            th{
+                padding: 10px 20px;
+            }
+            input[type='submit']{
+                height: 63px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>로그인 페이지</h1>
+        <hr/>
+        <table>
+                    
+            <tbody>
+                
+                <tr>
+                    <th>ID</th>
+                    <td><input type="text" name="id" value="" placeholder="아이디를 입력 하세요"></td>
+                    <td rowspan="2"><input type="submit" name="login" value="로그인"></td>
+                </tr>
+                <tr>
+                    <th>PW</th>
+                    <td><input type="password" name="pw" value="" placeholder="비밀번호를 입력 하세요"></td>
+                    
+                </tr>
+                <tr>
+                    <th colspan="3"><button>회원가입</button>   <button>아이디/비번 찾기</button></th>
+                </tr>
+            </tbody>
+            
+        </table>
+    </body>
+</html>

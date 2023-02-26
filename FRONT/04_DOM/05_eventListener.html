@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+        <style>
+            div{
+                width : 250px;
+                height : 250px;
+                background-color: yellowgreen;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h4 id ="msg"> FOCUS NULL</h4>
+        <p><input type = "text" id ="txtinput"/></p>
+        <div id = "eventZone"></div>
+        <h4>mouse position : <span id="pos"></span></h4>
+
+    </body>
+    <script>
+        // 1단계 : 이벤트를 걸어줄 요소 가져오기
+        var txtinput = document.getElementById('txtinput');
+        var zone = document.getElementById('eventZone');
+
+        // 2단계 : 리스너 추가(이벤트, 실행함수)
+        txtinput.addEventListener('focusin', fcin);
+
+        function fcin(){
+            console.log('focus in'); // 이벤트가 잘 걸렸는지 확인
+            //핸들링할 요소 가져오기 -> 원하는 속성 변경
+            txtinput.style.backgroundColor = 'pink';
+            document.getElementById('msg').innerHTML = 'FOCUS IN';
+        }
+
+        //실행 함수에 ()를 붙이지 않는다.
+        //이건 실행하라는 소리가 아니라 이벤트가 걸릴경우 실행할 함수를 알려주는 것이기 때문
+        txtinput.addEventListener('focusout', fcout);
+
+        function fcout(evt){ //만약 이벤트 객체가 필요 하다면?
+            console.log('focus out');
+            console.log(evt);
+            txtinput.style.backgroundColor = 'skyblue';
+            document.getElementById('msg').innerHTML = 'FOCUS OUT';
+
+        }
+
+        // 딱 여기서만 쓸거면 익명함수를 쓰는것이 좋다. function ____ (asd){}
+        txtinput.addEventListener('keyup',function(evt){
+            //console.log(evt.keyCode);
+            if(evt.keyCode ==13){
+                console.log(txtinput.value + ' 전송');
+            }
+        });
+
+        zone.addEventListener('click',function(){
+            console.log('click');
+            zone.style.backgroundColor = 'orange';
+        });
+
+        zone.addEventListener('dblclick',function(){
+            console.log('double click');
+            //이벤트 리스너에서는 this도 그냥 사용 가능. 당하는애니까
+            this.style.backgroundColor = 'yellow';
+        });
+
+        zone.addEventListener('mouseenter',function(evt){
+            console.log('evt');
+            // evt.target == this
+            evt.target.style.backgroundColor = 'blue' ;
+        });
+
+        zone.addEventListener('mouseout',function(){
+            console.log('OUT');
+            this.style.backgroundColor = 'yellowgreen';
+        });
+
+        document.addEventListener('mousemove', function(evt){
+            document.getElementById('pos').innerHTML = evt.screenX + '/' + evt.screenY
+        });
+
+
+
+    </script>
+</html>

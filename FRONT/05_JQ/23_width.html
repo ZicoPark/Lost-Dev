@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            img{
+                width : 400px;
+                height : 300px;
+                padding : 10px;
+                border : 3px solid black;
+                margin : 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <img src = "../img/demension.png"/>
+
+    </body>
+    <script>
+        window.onresize = function(){
+            console.log('window :' , $(window).width());
+            console.log('document : ' , $(document).width());
+        }
+
+        // 순수 element : 400,300
+        var width = $('img').width();
+        console.log(width);
+
+        // element + padding : 420,320
+        var innerWidth = $('img').innerWidth();
+        console.log(innerWidth);
+
+        // element + padding + border : 426,326
+        var outerWidth = $('img').outerWidth();
+        console.log(outerWidth);
+
+        // element + padding + border + margin : 436,336
+        var outerWidth_true = $('img').outerWidth(true);
+        console.log(outerWidth_true);
+
+
+
+    </script>
+</html>

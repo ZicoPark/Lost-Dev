@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+        <link rel="icon" href="../img/chrome.png">
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+    </body>
+    <script> //html태그 = 요소 = 객체. 같은 대상 다른 이름
+        // 오브젝트 만드는 법 1
+        var car = {'type':'Fiat', 'model' : 500, 'color' : 'white'};
+        console.log(car);
+
+        // 오브젝트 만드는 법 2(가장 많이 사용)
+        var person = {};
+
+        // 오브젝트 만드는 법 3
+        var computer = new Object();
+
+        // 오브젝트에 데이터 넣기1(많이 사용)
+        person.name = 'lee';
+        person.gener = 'male';
+        person.age = 26;
+        person.married = false;
+        console.log(person);
+
+        // 오브젝트에 데이터 넣기2 - 오브젝트는 인덱스가 문자열인 배열?
+        computer['cpu'] = 'octa_core';
+        computer['ram'] = '16GB';
+        computer['hdd'] = '2TB';
+        computer['game'] = 'false';
+        computer['price'] = 1400000;
+        console.log(computer);
+
+        //오브젝트 안에 함수
+        person.work = function(){
+            console.log('일을 한다.');
+        };
+
+        var test = function(){
+            console.log('변수 안에 함수?')
+        };
+        test(); //변수 안에 함수를 선언하면 호이스팅이 안된다.
+
+        console.log(person.name);
+        person.work();
+        console.log(computer.cpu); //배열 형식으로 넣으면 자동완성 지원이 안됨
+        console.log(computer['ram']); // 이런 형태도 가능
+        
+    </script>
+</html>

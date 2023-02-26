@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <!--favicon : 사이트를 대표하는 이미지(즐겨찾기시 아이콘역할)-->
+        <link rel="icon" href="../img/chrome.png"> <!--일반적으로 .ico파일씀-->
+        <style>
+            li.bird1{
+                width:110px;
+                height: 110px;
+                /* background-image: url(../img/spriteImg.png); => 좌표 조정이 안됨 */
+                background: url(../img/spriteImg.png) 0 0;
+            }
+            li.bird2{
+                width:110px;
+                height: 110px;
+                /* background-image: url(../img/spriteImg.png); */
+                background: url(../img/spriteImg.png) -215px -676px;
+            }
+            li{
+                list-style-type: none;
+                float:left;
+            }
+            li.bird3{
+                clear:left;
+                width:110px;
+                height: 110px;
+                /* background-image: url(../img/spriteImg.png); */
+                background: url(../img/spriteImg.png) 0 0;
+            }
+            li.bird3:hover{
+                background: url(../img/spriteImg.png) -109px 0;
+            }
+            li.bird4{
+                width:110px;
+                height: 110px;
+                /* background-image: url(../img/spriteImg.png); */
+                background: url(../img/spriteImg.png) -215px -676px;
+            }
+            li.bird4:hover{
+                background: url(../img/spriteImg.png) -215px 220px;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="bird1"></li>
+            <li class="bird2"></li>
+        </ul>
+        <ul>
+            <li class="bird3"></li>
+            <li class="bird4"></li>
+        </ul>
+
+    </body>
+</html>

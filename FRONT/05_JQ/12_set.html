@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <p id="test1">문자열 1</p>
+        <p id="test2">문자열 2</p>
+        <input id="test3" type="text" value="홍길동"/>
+        <input id="test4" type="text" value="비밀번호"/>
+        <div></div>
+        <br/>
+        <button>속성변경</button>
+
+    </body>
+    <script>
+        //text()는 html을 인정하지 않고 일반 문자열로 인식
+        // $('#test1').text('<b>변경된</b> 문자열'); // <b>변경된</b> 문자열
+        $('#test1').html('<b>변경된</b> 문자열'); // 변경된 문자열
+        $('button').on('click',function(){
+            // console.log('click!');
+            $('#test3').attr('type','button'); //해당 '요소'의 '지정된속성'을 '변경'한다.
+            $('#test3').attr('onclick','alert("OK!!!")'); //변경이후에 클릭시 얼러트가 뜨게 설정
+            $('#test4').attr('type','password');
+        })
+
+        // $('div').html('<input type="button"  value="test"  onclick="test()"/>');
+        // div요소에 test버튼생성하고 test함수설정
+
+        // escape 문자.\'문자열\'.
+        // 본래 문자가 가지고 있던 특수능력을 버리고 일반 문자로 표시되게 하는 것(프로젝트때 굉장히 중요)
+        $('div').html('<input type="button"  value="test"  onclick="test(\'Hello\')"/>');
+        // $('div').html('<input type="button"  value="test"  onclick="test('Hello')"/>'); 
+        // =>이렇게하면 Hello 앞뒤로 잘라서 문자열로 인식하고 Hello를 변수로 취급함
+
+        var param = 'OK';
+        $('div').html('<input type="button"  value="test"  onclick="test( '+ param + ')"/>');
+
+
+        function test(str){
+            alert(str);
+        }
+        
+
+    </script>
+</html>

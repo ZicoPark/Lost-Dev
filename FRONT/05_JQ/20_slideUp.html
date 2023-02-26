@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            div{
+                position : absolute;
+                width: 200px;
+                height: 50px;
+                top : 200px;
+                float : left;
+            }
+
+            div.first{
+                background-color: red;
+            }
+
+            div.second{
+                background-color: blue;
+                left : 220px;
+            }
+
+            div.third{
+                background-color: yellow;
+                left : 430px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+
+    </body>
+    <script>
+        $('div').hover(function(){
+            console.log('hover');//위로 올라가면서 아래로커지는거인데 착시현상
+            //css로 하면 딱딱하게 늘어났다 줄어듦. height : 기존 top + height값 해야 풀로참  / top은 0으로 잡아야끝까지올라감
+            $(this).animate({'height' : '250', 'top': '0'},'slow') 
+            //console.log($('div').not(this));
+        },function(){
+            $(this).animate({'height' : '50', 'top': '200'},'slow'); //원래 입력값으로 회귀(초기 div값)
+        });
+
+
+        
+
+    </script>
+</html>

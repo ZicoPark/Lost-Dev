@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+        <link rel="icon" href="../img/chrome.png">
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var dish; //빵을 담을 그릇
+        //hoisting : 함수가 아래에 선언되어 있어도 미리 읽어들인다. 자바스크립트 변수 생성과 초기화가 분리되어 진행되기 때문
+        dish = toaster('식빵');
+        console.log(dish);
+
+        function toaster(input){ //키워드 함수명(매개변수)
+            console.log(input + '(이/가) 구워지고 있다.'); //실행문
+            return '구워진' + input; //반환문
+        }         
+    </script>
+</html>

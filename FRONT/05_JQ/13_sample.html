@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <p>
+            ID : <input type="text" id="userId"/>
+            <button id = "goLink">확인</button>
+        </p>
+        <a href="#">링크 이동</a>
+        <!-- 아무거나 입력하고 확인 누르면 구글로-->
+        <!-- admin 입력하고 확인 링크이동 누르면 구디-->
+    </body>
+    <script> //절차를 쪼개서 생각하기.  if/else 문 or if문 하되 기본값 설정
+        // 1. goLink 클릭 하면
+        $('#goLink').on('click', function(){
+            // 2. userId의 value를 가져온다
+            var val = $('#userId').val();
+            console.log(val);
+
+            // 3. 가져온 값이 admin 인지 판별
+            // 4. 여부에 따라 a 태그의 href 속성 값이 변경
+            var url = 'https://www.google.co.kr/';
+
+            if(val == 'admin'){
+                url='https://gdu.co.kr/';
+            }
+            
+            $('a').attr('href',url);
+        });
+
+       
+    </script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>자식 창</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <h3> 자식창 </h3>
+        부모 창으로 보낼 값 : <input type = "text" id="toParent"/>
+        <input type = "button" value="보내기" onclick="sendVal()"/>        
+        <br/>
+        부모 창에서 받아온 값 : <input type = "text" id="fromParent"/>
+        
+
+    </body>
+    <script>
+        function sendVal(){
+            console.log('부모에게 데이터 보내기'); // 클릭시 실행되는 sendVal함수가 정상작동하는지 확인
+            //ID가 toParent인 '부모 창으로 보낼 데이터'에 입력될 값을 변수에 저장
+            var val = document.getElementById('toParent').value; 
+            
+            // opener == 부모 브라우저 창
+            // 부모창에서는 창내에서 가져왔기 때문에 win을썼지만 자식창에서는 따로 지정하지 않았기때문에
+            // 자기를 연결시켜준 부모를 불러오는 opener를사용한다.
+            opener.document.getElementById('fromChild').value=val;
+
+            //부모창에서 정의된 plus함수의 a,b값을 전달
+            opener.plus(10,20);
+        }
+
+    </script>
+</html>

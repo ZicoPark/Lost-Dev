@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <!-- 이벤트 객체(발생한 이벤트의 모든 정보)를 받을때-->
+        <button onclick="arg1(event)">button 1</button>
+        <!-- 이벤트가 발생된 당사자 정보를 받을 때-->
+        <button onclick="arg1(this)">button 2</button>
+        <p><a href = "#" onclick ="arg2(event,this)"> click 1</a></p>
+        <p><a href = "#" onclick ="arg2(event,this)"> click 2</a></p>
+
+
+    </body>
+    <script> //중괄호 : 오브젝트 / 대괄호 : 배열
+        function arg1(obj){ //obj자리 비워두면안된다. 위에 바디에있는 값을 받기위해
+            console.log(obj);
+        }
+
+        function arg2(evt,elem){
+            console.log(evt);
+            console.log(elem);
+            console.log(elem.innerHTML);
+        }
+
+    </script>
+</html>

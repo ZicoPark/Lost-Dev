@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <!--favicon : 사이트를 대표하는 이미지(즐겨찾기시 아이콘역할)-->
+        <link rel="icon" href="../img/chrome.png"> <!--일반적으로 .ico파일씀-->
+        <style>
+            div{
+                width: 200px;
+                height: 200px;
+                text-align: center;
+            }
+            div.static{
+                position: static;
+                background-color: yellow;
+            }
+            div.relative{
+                position: relative;
+                top:50px;
+                left:50px;
+
+                background-color: aqua;
+            }
+            div.absolute{
+                position:absolute;
+                width: 100px;
+                height: 100px;
+                top: 25%;
+                left: 25%;
+                border: 3px solid red;
+            }
+            div.fixed{/*퀵메뉴나 소셜바만들때 사용*/
+                position:fixed;
+                top: 15%;
+                left: 7%;
+                background-color: blueviolet;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="static">position:static</div>
+        <div class="relative">
+            position:relative
+            <div class="absolute">position:<br/>absolute</div>
+        </div>
+        <div class="fixed">
+            position:fixed
+        </div>     
+    </body>
+</html>

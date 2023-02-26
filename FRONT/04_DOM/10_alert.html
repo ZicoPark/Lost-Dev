@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <button onclick="popup()">alert</button>
+        <button onclick="conf()">confirm</button>
+        <button onclick="promp()">prompt</button>
+
+    </body>
+    <script>
+        function popup(){
+            //alert 이 나타나면 문서내 모든 프로세스가 멈춘다.
+            alert('경고창 입니다.');
+        }
+
+        function conf(){//confirm을 준 변수에 있는 값을 출력해준다. 확인/취소. 그래서 if/else를 씀
+            var result = confirm('정말로 삭제 하시겠습니까?');
+            console.log(result);
+            if(result ==true){
+                alert('삭제가 완료 되었습니다.');
+            }else{
+                alert('삭제가 취소 되었습니다.');
+            }
+        }
+
+        function promp(){//prompt를 준 변수에 있는 값을 출력한다. 입력창에 입력시 alert값을 출력해주고 있다.
+            var name = prompt('당신의 이름을 입력 하세요');
+            console.log(name);
+            alert('안녕하세요! ' + name + '님');
+        }
+
+    </script>
+</html>

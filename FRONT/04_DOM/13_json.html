@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <input type = "text" value=""/>
+        <button id = "btn"> JSON 변경</button>
+
+    </body>
+    <script>
+        var obj = {}; //object : 키:값 으로 구성
+        var arr = []; //array : 인덱스와 값으로 구성
+        // 위 두개 형태를 JSON이라고 부른다
+
+        var info = {'age': 22};
+        info.firstName = 'ji-hoon';
+        info['lastName'] = 'kim';
+        console.log(info);
+
+        arr.push(info);
+        console.log(arr);
+
+        obj.list = arr;
+        console.log(obj);
+
+        //json -> String
+        var txt = JSON.stringify(obj);
+        document.getElementsByTagName('input')[0].value = txt;
+        console.log(txt);
+
+        document.getElementById('btn').addEventListener('click', function(){
+            //text -> JSON
+            var json = JSON.parse(txt);
+            console.log(json);
+        })
+
+    </script>
+</html>

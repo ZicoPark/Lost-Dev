@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            div{
+                height : 30px;
+                position: absolute;
+
+            }
+
+            #obj{
+                width : 30px;
+                background-color: green;
+                top : 50%;
+                left : 50%;
+
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="obj"></div>
+        <div id="follow">마우스를 따라 다녀요</div>
+
+    </body>
+    <script>
+        $(document).on('click',function(e){
+            console.log(e.clientX+ '/' +e.clientY);
+            $('#obj').animate({'top' : e.clientY, 'left':e.clientX},'slow','swing');
+        });
+        
+        //mousemove는 빠른시간안에 많은 이벤트가 일어남으로 애니메이션을 굳이 하지않아도됨. 애니메이트걸었다가 프리징옴
+        $(document).on('mousemove',function(e){ 
+            console.log(e.clientX+ '/' +e.clientY);
+            $('#follow').css({'top' : e.clientY, 'left':e.clientX});
+        });
+    </script>
+</html>

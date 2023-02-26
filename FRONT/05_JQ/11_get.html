@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <input type ="text" value="some text"/>
+        <p>문자가 쓰여진 <b>강조된</b> 영역</p>
+
+        <fieldset>
+            <legend>숫자 입력</legend>
+            RANGE : 0~100 :
+            <input id = "point" type = "range" min = "0" max="100" value="" step="1"/>
+            당신이 선택한 값: <span id="msg"></span>
+        </fieldset>
+        <fieldset>
+            <legend>라디오버튼</legend>
+            <input type="radio" name="front" value="HTML"/>HTML<br/>
+            <input type="radio" name="front" value="CSS"/>CSS<br/>
+            <input type="radio" name="front" value="JS"/>JS<br/>
+            <input type="radio" name="front" value="JQUERY"/>J-QUERY<br/>
+            <span id="selected"> 선택값 없음</span>
+        </fieldset>
+
+    </body>
+    <script>
+        // value
+        var val = $('input').val();
+        console.log(val);
+
+        //attribute
+        var attr = $('input').attr('type');
+        console.log(attr);
+
+        //innerHTML or innerTEXT
+        var html = $('p').html();
+        var txt = $('p').text();
+        console.log(html); //문자가 쓰여진 <b>강조된</b> 영역
+        console.log(txt); // 문자가 쓰여진 강조된 영역
+
+        
+        // $('#point').on('mousedown',function(){ //아이디가 포인트인 애를 클릭했을시 아래 함수를 실행한다. 
+        //     var range = $(this).val(); // range값을 변수에 저장한다.
+        //     console.log(range); //저장한 변수를 출력한다
+        //     $('#msg').text(range); //id가 msg인 애의 출력부분에 range에 저장된값을 보여준다
+        // })
+
+
+        // range 조작 후 변경된 값 표시 하기
+
+        // 1. 원하는 요소는?
+        //console.log($('#point'));
+        // 2. 어떤 이벤트를 거는가?
+        /*
+        $('#point').on('mouseup',function(){
+            console.log('up');
+            // 3. 어떤 속성을 건드리는가?
+            //console.log($(this).val());  
+            var val = $(this).val();
+            // 4. 결과값을 어떻게 할 것인가?(요소 -> 속성)
+            $('#msg').text(val);
+        });
+        */
+
+        // 2. 어떤 이벤트를 거는가?
+        $('#point').on('mousedown',function(){//눌러진 상태에서...
+            //마우스가 움직일때
+            $(this).on('mousemove',function(){
+                // 3. 어떤 속성을 건드리는가?
+                //console.log($(this).val());  
+                var val = $(this).val();
+                // 4. 결과값을 어떻게 할 것인가?(요소 -> 속성)
+                $('#msg').text(val);
+            });            
+        });
+
+        $('#point').on('mouseup',function(){
+            $(this).off('mousemove');
+        });
+
+        // 1. 원하는 요소 가져오기
+        // console.log($('input[type="radio"]'));
+        // console.log($(':radio'));
+        var radio = $(':radio');
+
+        // 2. 이벤트 걸기
+        // J-QUERY 객체는 변수에 넣을 수 있다
+        // 다만 제이쿼리 객체가 들었다는 표시로 변수 앞에 $를 추가해 준다.(약속)
+        radio.click(function(){
+            // 3. 가져올 대상 지정, 원하는 속성 다루기
+            var val = $(this).val();
+            // 4. 표현할 위치 지정(요소->속성)
+            $('#selected').text(val);
+        });
+
+     
+
+        
+
+        
+
+    </script>
+</html>

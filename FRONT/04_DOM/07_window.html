@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <button onclick = "myWindow()">창열기</button>
+        <button onclick = "closeWin()">창닫기</button> <!--close는 예약어(이미있는것)이라 쓰면안됨-->
+
+    </body>
+    <script>
+
+        console.log(window); //window는 브라우저를 의미
+        console.log(window.innerWidth+ "/" +window.innerHeight);
+        var win;
+        function myWindow(){
+            console.log('window open!!!!!'); //항상 함수 정상작동하는지 확인하기
+            //window.open(url,title,option);
+            // width / height : 창의 크기
+            // top / left : 창의위치(left의 경우 1번 모니터를 기준으로 한다)
+            // resizable = no : 창크기 변경 여부(일부 브라우저에서만 동작)
+            // scrollbar = no : 스크롤바 생성(일부 브라우저에서만 동작)
+
+            //창을 다루기 위해서는 변수에 담아야 한다
+            win = window.open('https://www.w3schools.com','','width=400, height=400,top=500,left=500,reziable=no, scrollbar = no');
+        }
+
+        function closeWin(){
+            win.close(); 
+        }
+
+    </script>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            .ancestors *{
+                border: 2px solid red;
+                padding : 5px;
+                margin: 15px;
+                display : block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="ancestors">
+            <div>DIV(great-grandparent)
+                <ul>ul(grandparent)
+                    <li>li(parent)
+                        <span>span</span></li>
+                </ul>
+            </div>
+            <div>DIV(great-grandparent)
+                <p>p(parent)
+                    <span>span</span>
+                </p>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        //console.log($('body'));
+        console.log($('span').parent());
+        //$('span').parent().css({'border' : '2px solid blue'});
+        console.log($('span').parents());
+        //$('span').parents().css({'border' : '2px solid blue'});
+        console.log($('span').parentsUntil('ancestors')); //선택한 요소와 지정한 요소는 포함x
+        $('span').parentsUntil('.ancestors').css({'border' : '2px solid blue'});
+
+    </script>
+</html>

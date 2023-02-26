@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+        <link rel="icon" href="../img/chrome.png">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <input type = "text" id="item" value=""/>
+        <input type = "button" value="선택" onclick="getItem()"/>
+        <h3 id="msg"></h3>
+    </body>
+    <script>// 종종 중요한 스크립트는 헤드에들어감
+        function getItem(){
+            //console.log('click');
+            var val = document.getElementById('item').value;
+            console.log(val);
+            var text = document.getElementById('msg');
+
+            if(val == '콜라'){
+                text.innerHTML = val + '가 나왔습니다.';            
+            } else if(val == '생수'){
+                text.innerHTML = val + '가 나왔습니다.'; 
+            } else if(val == '오렌지주스'){
+                text.innerHTML = val + '가 나왔습니다.'; 
+            } else if(val == '사이다'){
+                text.innerHTML = val + '가 나왔습니다.'; 
+            } else if(val == '에너지음료'){
+                text.innerHTML = val + '가 나왔습니다.'; 
+            } else if(val == '이온음료'){
+                text.innerHTML = val + '가 나왔습니다.'; 
+            } else if(val == '냉커피'){
+                text.innerHTML = val + '가 나왔습니다.'; 
+            } else if(val == '식혜'){
+                text.innerHTML = val + '가 나왔습니다.'; 
+            } else{
+                text.innerHTML = val + '가 나왔습니다.'; 
+            }
+        }
+        
+    </script>
+</html>

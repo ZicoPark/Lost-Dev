@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            .ex{
+                width : 200px;
+                height : 200px;
+                background-color: aquamarine;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button id="add">스타일 추가</button>
+        <button id="remove">스타일 삭제</button>
+        <button id="toggle">ON</button>
+        <div>DIV</div>
+        
+
+    </body>
+    <script>
+        $('#add').click(function(){
+            // $('div').css({
+            //     'width': '200px',
+            //     'height': '200px',
+            //     'background-color':'yellow',
+            //     'text-align' : 'center'
+            // }); //이거 불편함. 위에 style에 주는게 훨씬 편함.
+
+            $('div').addClass('ex'); //addClass쓸때는 뒤에 . 필요없음
+        });
+
+        $('#remove').on('click',function(){
+            $('div').removeClass('ex'); //remove도 마찬가지
+        })
+
+        $('#toggle').on('click',function(){
+            $('div').toggleClass('ex'); //toggle도 마찬가지
+            var sw = $('div').hasClass('ex'); //hasclass는 특정 클래스를 가지고있는지 true|false로 변환
+            if(sw==true){
+                $(this).text('OFF');
+            }else{
+                $(this).text('ON');
+            }
+            
+            var yn = sw == true? 'OFF' : 'ON';
+            $(this).text(yn);
+
+
+        });
+
+
+
+    </script>
+</html>

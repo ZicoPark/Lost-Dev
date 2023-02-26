@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            div{
+                width : 100px;
+                height : 100px;
+                background-color: green;
+                display : none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button id = "viz">fadeIn</button>
+        <button id = "inviz">fadeOut</button>
+        <button id = "toggle">On</button>
+        <div></div>
+        <br/>
+        <img src="../img/chrome.png" width="100px"/>
+
+    </body>
+    <script>
+        // $('img').hover(function(){
+        //     //fadeTo(속도,투명도)
+        //     $(this).fadeTo('slow',0.2); 
+        // },function(){
+        //     $(this).fadeTo('slow',1);
+        // });
+
+        //우선 fadeIn버튼에 이벤트를 걸고 시작해야 작동하니 id가 viz인 fadeIn버튼을 클릭할시 이벤트를 실행하는 함수를 설정한다
+        $('#viz').on('click',function(){
+            //speed, callback
+            //show() - 크기를 조절하면서 투명도를 조절
+            //fadeIn() - 요소를 만들고 이후 투명도를 조절
+
+            //스타일에서 지정한 div값을 div에서 느리게 서서히 나타나게 하는 효과를 지정하고 vizCheck라는 callback함수를 효과가끝나고 실행한다
+            $('div').fadeIn('slow',vizCheck); 
+
+        });
+
+        // // $('#inviz').on('click', function(){
+        // //     $('div').fadeOut(3000,vizCheck); //서서히 사라지는효과
+        // // })
+
+        // $('#toggle').on('click', function(){
+        //     $('div').fadeToggle('fast',vizCheck); // 두개효과를 토글 on/off
+        // })
+
+        var vision; //div의 display상태에 따라 띄우거나 사라지게 해야함으로 이를 저장할 변수 지정
+        function vizCheck(){ // 위에서 적용할 vizCheck 콜백함수를 설정한다
+            vision = $('div').css('display'); // div에 있는 css에 있는 요소중에 display값을 가져와서 vision 변수에 저장
+            console.log('display : ',vision); // 콘솔에 display값 제대로찍히는지 확인
+            if(vision == 'block'){ //block과 none 두 값이 존재하므로 if,else를 쓴다
+                $('#toggle').text('OFF'); // block값이면 이미 띄워져있으므로 다시 꺼야하니 보이는 text버튼 값은 OFF로 변경한다.
+            }else{
+                $('#toggle').text('ON'); // none일때 이미 사라져 있으므로 다시 켜야하니 보이는 text버튼 값은 ON로 변경한다.
+            }
+        }
+
+        
+
+        
+
+    </script>
+</html>

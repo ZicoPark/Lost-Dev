@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <!--favicon : 사이트를 대표하는 이미지(즐겨찾기시 아이콘역할)-->
+        <link rel="icon" href="../img/chrome.png"> <!--일반적으로 .ico파일씀-->
+        <style>
+            /*style이 들어간다.*/
+            p{
+                /*전체 p 태그*/
+                background-color: aqua;
+            }
+            
+            .myclass{
+                /* class가 myclass 인 요소를 가져와서 글자 색상변경 */
+                color:crimson;
+            }
+
+            #myid{
+                /* id는 중복이 허용되지 않는다. */
+                /* 만약 1개 이상일 경우 제일 먼저 찾아지는 요소만 선택 */
+                color:fuchsia;
+            }
+
+            /* 복수개를 선택할 경우 콤마(,)로 구분해 준다. */
+            p,div{
+                /* 글자 굵기를 볼드체로 */
+                font-weight:600;
+            }
+            
+            /* div>p / div p 둘다 가능 */
+            div>p{
+                background-color: chartreuse;
+            }
+
+            /* [] : input 태그의 속성과 값을 활용 */
+            input[type='text']{
+                background-color:bisque;
+            }
+
+            input[type='email']{
+                background-color:blue;   
+            }
+
+            img{
+                /* 높이 지정이 없으면 가로의 크기에 따라 적당한 비율로 맞춘다. */
+                width: 100px;
+            }
+            
+            /* hover = handover(특정 아이콘 위에 커서를 놓았을때 커서가 변경) */
+            img:hover{
+                border: 1px solid black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p id="myid"> id가 있는 요소</p>
+        <p class="myclass"> class가 있는 요소</p>
+        <p class="myclass"> class가 있는 요소</p>
+        <p> 태그만 있는 요소</p>
+        <div>DIV 요소</div>
+        <div>
+            <p>DIV 안에 있는 P 태그</p>
+        </div>
+
+        <input type ="text"/>
+        <input type ="email"/>
+        <br/>
+        <img src="../img/img01.jpg" alt="mushroom"/>
+        <img src="../img/img02.jpg" alt="fire flower"/>
+        <img src="../img/img03.jpg" alt="mario"/>
+        <img src="../img/img04.jpg" alt="unknown"/>
+
+
+    </body>
+</html>

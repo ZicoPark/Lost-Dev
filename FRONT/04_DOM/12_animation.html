@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+        <style>
+            #cnt{
+                color : red;
+            }
+
+            progress{
+                display : none;
+                width : 500px;
+                height : 25px;
+            }
+
+            #proc{
+                width : 10px;
+                height : 10px;
+                background-color: red;
+                position : absolute;
+                top : 100px;
+                left : 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><span id = "cnt">5</span>초 후에 다운로드가 시작 됩니다.</h1>
+        <progress id = "download" min="0" max="100" value="0"></progress>
+        <div id="proc"></div>
+
+    </body>
+    <script>
+        var count = 5;
+        var msg = document.getElementById('cnt');
+        var bar = document.getElementById('download');
+
+        var inter = setInterval(function(){
+            count--;
+            msg.innerHTML = count;
+        },1000);
+
+        setTimeout(function(){
+            clearInterval(inter);
+            download();
+        },5000);
+
+        function download(){
+            var tag = document.getElementsByTagName('h1')[0];
+            tag.innerHTML = '다운로드 진행중(0%)';
+            bar.style.display = 'block';
+            var per = 0;
+            var obj = document.getElementById('proc');
+            
+            inter = setInterval(function(){
+                per ++;
+                obj.style.left = per*5;
+                bar.value = per;
+                tag.innerHTML = '다운로드 진행중(' + per +' %)';
+                console.log(per);
+                if(per == 100){
+                    tag.innerHTML = '다운로드 완료';
+                    clearInterval(inter);
+                }
+            },50);
+        }
+
+    </script>
+</html>

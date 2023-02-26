@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>INPUT TAG</title>
+    </head>
+    <body>    
+        <!-- button : 어떤 이벤트를 발생 할 때 가장 많이 사용-->
+        <!-- 아래 두개 태그는 같은 버튼이지만 조금 다르다.-->
+        <input type="button" value="click me"/>
+        <button>클릭</button>
+
+        <!-- fieldset : 특정 영역을 테두리로 감쌀 때-->
+        <fieldset>
+            <!-- fieldset에 대한 제목-->
+            <legend>text & password</legend>
+            <!-- form : 서버로 무언가를 보낼 때 사용-->
+            <form>
+                ID : <input type="text" name="id" value="" placeholder="아이디를 입력 하세요"/>
+                PW : <input type="password" name="pw" value="" placeholder="비밀번호를 입력 하세요"/>
+                <!-- submit : form 안의 input들을 서버로 보낼 때 사용-->
+                <input type="submit" value="로그인"/>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend> checkbox & radio</legend>
+            <!--checkbox : 중복선택가능 / radio : 중복선택불가 // 전제조건 : 항목통일 되어있어야함(name)-->
+            <input type ="checkbox" name="vehicle" value="Bike" /> Bike
+            <input type ="checkbox" name="vehicle" value="Car" /> Car
+            <input type ="checkbox" name="vehicle" value="Boat" /> Boat
+            <input type ="checkbox" name="vehicle" value="Cycle" /> Cycle
+            <br/><br/>
+            <input type = "radio" name="gneder" value="male"/> male
+            <input type = "radio" name="gneder" value="female"/> female
+        </fieldset>
+
+        <fieldset>
+            <legend>file</legend>
+            <!-- multiple : 여러 파일 선택 가능-->
+            파일을 선택 하세요 : <input type="file" name="img" multiple />
+        </fieldset>
+        
+        <fieldset>
+            <legend>hidden & text</legend>
+            First Name : <input type="text" name="firstName" value="jihoon"/>
+            <br/>
+            <!-- hidden은 text와 같으나 안보여준다.-->
+            Last Name : <input type="hidden" name="lastName" value="kim"/>
+            <h3>content</h3>
+            <!-- textarea는 다량의 텍스트를 쓰고 전송할 때 사용-->
+            <textarea name="content"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>select & datalist</legend>
+            자동차 선택 :
+            <select name="car">
+                <!-- value는 서버에서 받는 값. 태그 사이 값은 사용자가 보는 값-->
+                <option value = "volvo">볼보</option>
+                <option value = "BMW">비엠더블유</option>
+                <option value = "BENZ">벤츠</option>
+                <option value = "FERARRI">페라리</option>
+            </select>
+            
+            <!-- list와 id가 일치해야 한다-->
+            <!-- datalist : 선택 항목 중에서 검색 내용에 따라 항목을 줄여준다.-->
+            <input list="browsers" name="browser"/>
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="FirFox">
+                <option value="Opera">
+                <option value="Chrome">
+            </datalist>
+        </fieldset>
+
+        <fieldset> <!-- ../ : 상위단계로 이동-->
+            <legend>image</legend>
+            <img src="../img/chrome.png" width="48" height="48" alt="이미지설명"/>
+            <input type="image" src="../img/chrome.png" width="48" height="48" alt="이미지설명"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>color</legend>
+            원하는 색상을 선택 하세요 : 
+            <input type="color" name="favcolor"/>
+        </fieldset>
+      
+        <fieldset>
+            <legend> data & month</legend>
+            date : <input type="date" name="dday"/><br/>
+            month : <input type="month" name="smonth"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Number</legend>
+            <form>
+                <!--숫자만 가능, 입력 영역을 설정할 수 있다.-->
+                NUMBER(1-10) : <input type="number" name="qty" value="1" min="1" max="10"/>
+                <input type="submit"/>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>guage</legend>
+            RANGE : <input type="range" name="points" value="0" min="0" max="10" step="2"/><br/>
+            <!-- meter와 progress는 사용자가 움직일 수 없다. ex> 다운로드 바. 둘이 큰차이는 없음-->
+            METER : <meter value="20" min="0" max="100"></meter><br/>
+            PROGRESS : <progress value="50" min="0" max="100"></progress>
+        </fieldset>
+    </body>
+</html>

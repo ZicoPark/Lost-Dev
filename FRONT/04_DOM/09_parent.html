@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>부모 창</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <button>창열기</button>
+        <button>창닫기</button>
+        <br/>
+        자식 창으로 보낼 데이터 : <input type = "text" id="toChild"/>
+        <input type = "button" value="보내기" onclick="sendVal()"/>
+        <br/>
+        자식 창에서 보낸 데이터 : <input type = "text" id="fromChild"/>
+        
+
+    </body>
+    <script> 
+        //go Live눌러서 작동. 웹 브라우저는 기본적으로 사용자의 로컬환경에서 보안상의 이유로 접근할 수 없음.
+        //D드라이브가 뜨면안되고 아이피주소같은게 떠야 정상작동. 실행시 창열기를 반드시 눌러주고 창을 열고난 다음에 해야 오류안뜸.
+        var win; //창열기 눌렀을시 가져올 자식창을 위한 변수 지정
+        var btn = document.getElementsByTagName('button'); //버튼태그들 가져온다
+        console.log(btn); // 출력한다
+        btn[0].addEventListener('click',function(){// 배열의 0번위치인 창열기를 클릭할시 실행할 함수 입력
+            //09번 파일을 가로 세로 지정값으로 불러온다
+            win = window.open('./09_child.html', 'child','width=500, height=110');
+        })
+        
+        btn[1].addEventListener('click',function(){// 배열의 1번위치인 창열기를 클릭할시 실행할 함수 입력
+            win.close(); // win변수로 열었던 창을 닫는다. window.close();로 하면 부모창이 닫혀버린다
+        }) //여기까지 버튼에 대한 설명
+
+
+        function sendVal(){//자식 창으로 보낼 데이터 함수 설정
+            //console.log('자식으로 데이터 보내기');
+            var val = document.getElementById('toChild').value; //ID가 tochild인 '자식 창으로 보낼 데이터'에 입력될 값을 변수에 저장
+            win.document.getElementById('fromParent').value = val; // 윈도우 전체에서 id가 fromParent인 애의 값을 val 변수에 저장
+            console.log(val);
+        }
+
+        function plus(a,b){ //자식창에서 plus함수를 실행했을때 문자열이나 숫자 상관없이 매개변수 a,b에 해당하는 값을 더해서 콘솔에 보여준다
+            console.log('부모 함수 plus 실행 : ', a+b);
+        }
+
+    </script>
+</html>

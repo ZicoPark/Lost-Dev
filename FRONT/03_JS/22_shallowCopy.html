@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+        <link rel="icon" href="../img/chrome.png">
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var x = 10; // X에 10을 넣고
+        var y = x; // X의 값을 Y에 넣고
+        x = 20; // X의 값을 20으로 바꾸면
+        console.log(x,y); // 당연히 X = 20 , Y = 10이 된다.
+
+        var a = [1,2,3,4,5];
+        var b = a;
+        console.log('a : ' + a.valueOf());
+        console.log('b : ' + b.valueOf());
+
+        a[0] = 50;
+        b[4] = 100;
+        console.log('a : ' + a.valueOf()); 
+        console.log('b : ' + b.valueOf()); //둘다 50,2,3,4,100 이 나온다.
+
+        /*
+        a[0], b[4]를 각각 바꿨으나 a와 b 배열에 함께 적용이 된다.
+        이 현상을 shallow copy라고 부른다.
+        var b = a;는 a 배열을 b로 '복사'한 것이 아니라
+        '연결(링크)'했다고 보는 것이다.
+        */
+
+        // 그러면 배열'복사'를 하려면 어떻게 해야하는가?
+        // 하나하나 해야 한다.
+        var src = [1,2,3,4,5];
+        var dst = [];
+
+        //dst.length
+        for(var i = 0; i<src.length ; i++){
+            dst.push(src[i]);
+        }
+        /*
+        dst.push(src[0]);
+        dst.push(src[1]);
+        dst.push(src[2]);
+        dst.push(src[3]);
+        dst.push(src[4]);
+        */
+
+        src[0] = 50;
+        dst[4] = 100;
+        console.log('src : ' + src.valueOf()); 
+        console.log('dst : ' + dst.valueOf());
+    </script>
+</html>

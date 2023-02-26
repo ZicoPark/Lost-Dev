@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <ol>
+            <li> location은 위치 정보를 얻어올 때 사용 된다.</li>
+            <li> window.location.href</li>
+            <li> window.location.protocol</li>
+            <li> window.location.hostname</li>
+            <li> window.location.pathname</li>
+            <li> window.location.port</li>
+            <li> window 는 생략 가능 하다.</li>
+        </ol>
+        <button>페이지 이동</button>
+
+    </body>
+    <script>
+        //서버환경에서 실행해야 한다.
+        console.log('href : ',location.href); // 현재 페이지가 존재하는 경로
+        console.log('protocol : ',location.protocol); // http or https인지 보여줌
+        console.log('hostname : ',location.hostname); // 네트워크 상에서 도메인
+        console.log('pathname : ',location.pathname); // 도메인을 제외한 나머지 주소
+        console.log('port : ',location.port);  // 포트번호
+
+        var btn = document.getElementsByTagName('button');
+        console.log(btn);
+        btn[0].addEventListener('click',function(){
+            location.href='./03_event.html'; // 이동하고 싶은 곳으로 이동
+        })
+
+    </script>
+</html>

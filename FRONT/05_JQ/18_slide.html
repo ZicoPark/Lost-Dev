@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            div{
+                text-align: center;
+                background-color: yellowgreen;
+                border: 1px solid green;
+                padding: 5px;
+                margin : 2px;
+                cursor : pointer;
+            }
+
+            .panel{
+                padding : 50px 0px;
+                display : none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="flip">MENU 1</div>
+        <div class="panel" id="p1">SUB MENU</div>
+
+        <div id="flip2">MENU 2</div>
+        <div class="panel" id="p2">SUB MENU</div>
+
+    </body>
+    <script>
+        $('#flip').hover(function(){
+            //slideDown(속도,콜백함수)
+            console.log('in');
+            $('#p1').slideDown('fast');
+            // $(this).next().slideDown('slow');//this를 기준으로 생각하면 형제 관계이기때문에 위치를 보고 next를 썼음
+
+        }, function(){
+            //slideDown(속도,콜백함수)
+            console.log('out');            
+            $('#p1').slideUp('slow');
+        });
+
+        // 위 코드의 문제점 : 슬라이드 업이 될 때 마우스가 들어오면 다시 슬라이드 다운 실행(정신사납게 왔다갔다함)
+        // 해결책 : 마우스가 나갔다 들어왔을때 슬라이드 다운이 실행x
+        // 1. 마우스 엔터 -> 슬라이드 다운
+        $('#flip').on('mouseenter',down);
+        // 2. 마우스 아웃 -> 슬라이드 업, 마우스 엔터를 off -> 애니메이션이 모두 끝나고 나서 마우스엔터 on
+        $('#flip').on('mouseleave',function(){
+            $(this).off('mouseenter');
+            $(this).next().slideUp('slow',function(){ //애니메이션이 모두 끝나고 나서 마우스엔터 on
+                $('#flip').on('mouseenter',down); //콜백함수는 얘를써서 다시 기존 마우스엔터시 바가 내려옴
+            }); 
+        });
+
+        function down(){
+            $(this).next().slideDown('slow');
+        }
+
+        $('#flip2').on('click',function(){
+            // console.log('click');
+            $(this).next().slideToggle('slow');
+        });
+
+    </script>
+</html>

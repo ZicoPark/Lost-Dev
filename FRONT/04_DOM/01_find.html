@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <h1>H1 TAG 1</h1>
+        <h1>H1 TAG 2</h1>
+        <h1>H1 TAG 3</h1>
+        <h1>H1 TAG 4</h1>
+        <h1>H1 TAG 5</h1>
+        <h2 class ="head2"> H2 Tag 1</h2>
+        <h2 class ="head2"> H2 Tag 2</h2>
+        <h2 class ="head2"> H2 Tag 3</h2>
+        <h2 class ="head2"> H2 Tag 4</h2>
+        <h3 id ="head3"> H2 Tag</h3>
+    </body>
+    <script>
+        var elemTag = document.getElementsByTagName('h1'); //element'들' . 배열로 가져온다
+        console.log(elemTag);
+
+        var elemClass = document.getElementsByClassName('head2'); //element'들'. 배열로 가져온다.
+        console.log(elemClass);
+
+        var elemId = document.getElementById('head3'); 
+        console.log(elemId);
+
+        console.log('--------------------------------');
+
+        // css의 selector같은 역할을 한다. 그러나 IE8이하는 사용 못함
+        // 있다정도만 알고있기. 위에 애들을 더 선호
+        elemId = document.querySelector('#head3');
+        console.log(elemId);
+
+        // 사용은 편리하나 하나밖에 가져 올 수 없다        
+        elemClass = document.querySelector('.head2');
+        console.log(elemClass);
+
+        // querySelectorAll 을 사용하면 다 가져올 수 있다.
+        elemTag = document.querySelectorAll('h1');
+        console.log(elemTag);
+    </script>
+</html>

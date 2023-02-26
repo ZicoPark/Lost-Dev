@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            #ex1{
+                background-color: orange;
+                width : 300px;
+                height : 150px;
+            }
+
+            p{
+                font-size: 30px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="ex1">
+            ID : <input type = "text" name="userId"/>
+            <br/>
+            PW : <input type = "password" name="userPw"/>
+            <br/>
+            <button>로그인</button>
+            <p>
+                <span></span>
+            </p>
+        </div>
+
+    </body>
+    <script>
+        $('#ex1').hover(function(){
+            console.log('over');
+            $(this).find('span').text('로그인 해주세요');
+        }, function(){
+            console.log('out');
+            $(this).find('span').text('');
+        });
+
+
+        $('input').on({
+            focus : function(evt){
+                console.log('focus');
+                $(evt.target).css({'background-color' : 'pink'})
+                //$(this).css({'background-color' : 'pink'}); //evt안줬을때
+            },
+            blur : function(evt){
+                console.log('blur');
+                $(evt.target).css({'background-color' : 'yellow'})
+                //$(this).css({'background-color' : 'yellow'}); //evt안줬을때
+            }
+        });
+    </script>
+</html>

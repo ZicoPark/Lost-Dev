@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <!--favicon : 사이트를 대표하는 이미지(즐겨찾기시 아이콘역할)-->
+        <link rel="icon" href="../img/chrome.png"> <!--일반적으로 .ico파일씀-->
+        <style>
+            /*style이 들어간다.*/
+            table, td, th{
+                border:2px solid black;
+                border-collapse: collapse;
+            }
+
+            th,td{
+                padding: 10px 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>회원목록</caption>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>나이</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="name">가나다</td>
+                    <td class="age">12</td>
+                </tr>
+                <tr>
+                    <td class="name">라마바</td>
+                    <td class="age">23</td>
+                </tr>
+                <tr>
+                    <td class="name">사아자</td>
+                    <td class="age">34</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>

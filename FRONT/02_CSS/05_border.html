@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <!--favicon : 사이트를 대표하는 이미지(즐겨찾기시 아이콘역할)-->
+        <link rel="icon" href="../img/chrome.png"> <!--일반적으로 .ico파일씀-->
+        <style>
+            .one{
+                border:1px solid red;
+            }
+
+            .two{
+                border-width: 1px;
+                border-style: dashed;
+                border-color: brown;
+            }
+
+            .three{
+                border-bottom: 1px dotted salmon;
+                border-top: 3px double blueviolet;
+                border-right: 5px groove darkolivegreen;
+            }
+
+            .four{
+                /* 한개값만 쓰면 4방향 동시적용 / 두개면 위아래, 좌우 적용 / 네개면 12시부터 시계방향 */
+                border-style: double solid;
+                border-width: 10px 20px;
+                border-color:aqua blue red gray;
+                
+                            }
+
+            .five{
+                border-right: 5px dotted darkolivegreen;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p class="one">This is Content</p>
+        <p class="two">This is Content</p>
+        <p class="three">This is Content</p>
+        <p class="four">This is Content</p>
+        <p class="five">This is Content</p>
+
+    </body>
+</html>

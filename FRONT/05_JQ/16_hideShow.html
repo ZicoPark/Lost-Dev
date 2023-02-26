@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            div{
+                width : 100px;
+                background-color: green;
+                padding : 10px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>메뉴1</div>
+        <ul>
+            <li>LIST 01</li>
+            <li>LIST 02</li>
+            <li>LIST 03</li>
+            <li>LIST 04</li>
+            <li>LIST 05</li>
+        </ul>
+
+        <button id="toggle">OFF</button>
+        <p>LIST 01</p>
+        <p>LIST 02</p>
+        <p>LIST 03</p>
+        <p>LIST 04</p>
+        <p>LIST 05</p>
+
+
+    </body>
+    <script>
+        $('ul').hide(); //display를 none으로 바꿔주는 역할
+
+        $('div').hover(function(){
+            $('ul').show(1000); //1초동안 스르륵 나옴
+        },function(){
+            $('ul').hide('fast'); //빠르게 슼 사라짐
+        });
+
+        $('#toggle').click(function(){
+            // speed, easing, callback
+            $('p').toggle('slow',function(){
+                //callback 함수는 애니메이션이 모두 종료되고 나서 실행 된다.
+                console.log('animation end')
+                var tog = $('#toggle').text();
+                if(tog == 'OFF'){
+                    $('#toggle').text('ON');
+                }else{
+                    $('#toggle').text('OFF');
+                }
+
+            })
+        });
+    </script>
+</html>

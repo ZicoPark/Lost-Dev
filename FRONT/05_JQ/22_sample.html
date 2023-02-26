@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            table, th, td{
+                border : 2px solid black;
+                border-collapse: collapse;
+            }
+
+            th, td{
+                padding : 10px 20px;
+            }
+
+            table{
+                width : 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>학번</th>
+                    <th>이름</th>
+                    <th>과목</th>
+                    <th>학점</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        학번 : <input type="text" id="no"/><br/>
+        이름 : <input type="text" id="name"/><br/>
+        과목 : <input type="text" id="sub"/><br/>
+        학점 : <input type="text" id="score"/><br/>
+        설명 : <input type="text" id="desc"/><br/>
+        <button>입력</button>
+
+    </body>
+    <script> 
+        // 1. 인풋 타입에 값을 입력한다
+        // 2. 값을 입력하고 입력버튼을 누른다
+        // 3. 버튼을 누르면 순차적으로 표에 하나씩 입력된다
+        // 4. 나중에 입력한 값이 뒤에붙는다->after를 쓴다
+              
+        
+
+        // 지정한 요소의 가장 나중에 붙는다
+        // $('button').on('click',function(){
+        //     var no = $('#no').val();
+        //     var name = $('#name').val();
+        //     var sub = $('#sub').val();
+        //     var score = $('#score').val();
+        //     var desc = $('#desc').val();
+
+        //     $('thead').append('<tr>','<td>'+ no +'</td>','<td>'+ name + '</td>','<td>'+ sub + '</td>','<td>'+ score + '</td>','<td>'+ desc + '</td>','</tr>');
+        // });
+
+
+
+        // // 1. button 을 누르면 input 에 있는 값을 읽어온다.
+        // $('button').on('click',function(){
+        //     //console.log($('input[type="text"]'));
+        //     var no = $('#no').val();
+        //     var name = $('#name').val();
+        //     var sub = $('#sub').val();
+        //     var score = $('#score').val();
+        //     var desc = $('#desc').val();
+        //     console.log(no+'/'+name+'/'+sub+'/'+score+'/'+desc);
+        //     var tr = '<tr>';
+        //         tr += '<td>'+no+'</td>';
+        //         tr += '<td>'+name+'</td>';
+        //         tr += '<td>'+sub+'</td>';
+        //         tr += '<td>'+score+'</td>';
+        //         tr += '<td>'+desc+'</td>';
+        //         tr += '</tr>';
+        //     console.log(tr);
+        //     $('thead').append(tr);// 2. tbody 의 자식 요소로 붙인다.
+        // });
+
+
+        $('button').on('click',function(){
+            var $input = $('input[type="text"]');
+            var html = '<tr>';
+            for(var i = 0 ; i<$input.length ; i++){
+                html += '<td>' + $input.eq(i).val() +'</td>'
+            }
+            html += '</tr>';
+            console.log(html);
+            $('tbody').append(html);
+        })
+
+
+
+    </script>
+</html>

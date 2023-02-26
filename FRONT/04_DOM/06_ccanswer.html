@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <p>버튼을 누르면 글자 색상이 변경 된다.</p>
+        <p>빨->주->노->초->파->남->보</p>
+        <p>보라색에서 다시 클릭 하면 빨강으로 되돌아 온다.</p>
+        <h1 id="txt">글자 색상이 변경 됩니다.</h1>
+        <button id = "btn">색상변경</button>
+
+    </body>
+    <script>
+        var text = document.getElementById('txt');  //id가 txt인 친구를 불러서 text에 저장
+        var button = document.getElementById('btn');    //id가 btn인 친구를 불러서 button에 저장
+        //
+        var arrColor = ['red','orange','yellow','green','blue','navy','purple'];
+        // i라는 변수는 arrColor안에 있는 친구들을 꺼낼때 index값으로 사용 할것
+        var i = 0;
+
+        
+        button.addEventListener('click', function() {
+            
+            if(i == 7) {
+                i=0;
+            }
+            //arrColor[]에 i값에 따라 텍스트의 색상을 바꿔줌
+            text.style.color=arrColor[i];
+            
+            i++;
+        });
+
+    </script>
+</html>

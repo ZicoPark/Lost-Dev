@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            div{
+                border : 1px solid black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>첫번째 요소</p>
+            <p class="sel">두번째 요소</p>            
+            <p>세번째 요소</p>
+            <p class="sel">네번째 요소</p>        
+        </div>
+
+        <div>
+            <p>다섯번째 요소</p>
+            <p class="sel">여섯번째 요소</p>            
+            <p>일곱번째 요소</p>
+            <p class="sel">여덟번째 요소</p>        
+        </div>
+
+    </body>
+    <script>
+        //div 자식 p 요소만 가져오기
+        //var elem = $('div').children('p');
+        var elem = $('div p');
+        console.log(elem);
+
+        // 배열 개념
+        // 첫번째 인덱스 가져오기
+        elem = $('div p').first();
+        console.log(elem);
+
+        // 마지막 인덱스 가져오기
+        elem = $('div p').last();
+        console.log(elem);
+
+        // n번 인덱스 가져오기
+        elem = $('div p').eq(3); //4번째요소. 3번인덱스
+        //elem = $('div p')[3]; //4번째요소. 3번인덱스
+        console.log(elem);
+
+
+        // 필터 개념(두번째 셀렉터로 걸러내는 개념)
+        elem = $('p').filter('.sel'); //p.sel
+        console.log(elem);
+        // not : filter에 걸리지 않는 조건을 가져온다.
+        elem = $('p').not('.sel');
+        console.log(elem);
+
+
+    
+
+    </script>
+</html>

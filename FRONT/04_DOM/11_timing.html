@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <h1 id = "cnt">0</h1>
+        <button onclick = "interval(this)">증가</button>
+        <button onclick = "clearInter()">정지</button>
+        <button onclick = "setTime()">3초 후 경고</button>
+
+    </body>
+    <script>
+        var i = 0;
+        var time;
+
+        function setTime(){
+            //3. setTimeout(실행함수, 시간);
+            setTimeout(function(){
+                alert('3초가 경과 했습니다.');
+            },3000)
+        }
+
+        function interval(elem){
+            console.log(elem);
+            elem.disabled = true;
+            //console.log('click');
+            //1. setInterval(실행할 함수, 간격);
+            time = setInterval(function(){
+                i++;
+                console.log(i);
+                document.getElementById('cnt').innerHTML = i;
+
+            },1000);
+        }
+
+        function clearInter(){
+            //2. clearInterval(중지할 인터벌)
+            //console.log('stop');
+            clearInterval(time);
+            //숫자 초기화
+            i = 0;
+            document.getElementById('cnt').innerHTML = i;
+            // 비활성화 버튼 다시 활성화
+            document.getElementsByTagName('button')[0].disabled = false;
+
+        }
+
+
+
+    </script>
+</html>

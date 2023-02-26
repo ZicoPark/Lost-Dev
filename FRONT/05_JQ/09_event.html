@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>J-QUERY</title>
+        <link rel="icon" href="../img/chrome.png">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!-- j-query의 장점 : 복잡한 상황도 쉽게 가져올 수 있다 -->
+        <style>
+            p{
+                cursor: pointer;
+            }
+            div{
+                width: 200px;
+                height : 200px;
+                margin-right: 7px;
+                float : left;
+                text-align: center;
+            }
+            #mousezone{
+                background-color: aqua;
+            }
+            #overzone{
+                background-color: orange;
+            }
+            #loginzone{
+                clear : left;
+                text-align: left;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>클릭하면 글자 색상이 바뀝니다.</p>
+        <p>클릭하면 글자 색상이 바뀝니다.</p>
+        <p>클릭하면 글자 색상이 바뀝니다.</p>
+        <p>클릭하면 글자 색상이 바뀝니다.</p>
+        <div id = "mousezone">마우스 존</div>
+        <div id = "overzone">H OVER 존</div>
+        <div id = "loginzone">
+            ID : <input type="text"/>
+            <br/>
+            PW : <input type="text"/>
+        </div>
+
+    </body>
+    <script>
+        $('p').on('click',function(){ //on쓰는법
+            $(this).css({'color' : 'red'}); //this활용            
+        });
+
+        $('p').dblclick(function(){ //그냥 바로함수
+            $(this).css({'color' : 'blue'}); //this활용
+        });
+
+        // //mouseenter, mouseleave
+        // $('#mousezone').mouseenter(function(){ //그냥 바로함수
+        //     console.log('enter');
+        //     $(this).css({'background-color' : 'blue'}); //this활용
+        //     $(this).html('마우스 엔터');
+        // });
+
+        // $('#mousezone').mouseleave(function(){ //그냥 바로함수
+        //     console.log('leave');
+        //     $(this).css({'background-color' : 'gray'}); //this활용
+        //     $(this).html('마우스 존');
+        // });
+
+        //on 으로 여러 이벤트 등록
+        // Object의 key는 굳이 문자열로 하지 않아도 된다.
+        $('#mousezone').on({
+            mouseenter:function(){
+                console.log('mouse enter');
+                $(this).text('마우스 들어옴');
+            },
+            mouseleave:function(){
+                console.log('mouse leave');
+                $(this).text('마우스 존');
+            },
+            mousedown:function(){
+                console.log('mouse down');
+                $(this).text('마우스 버튼 누름');
+            },
+            mouseup:function(evt){
+                console.log('mouse up');
+                $(this).text('마우스 버튼 뗌');
+                console.log(evt);
+            }                
+        });
+
+        // $('#mousezone').off(); // 지울 이벤트를 명시하지 않으면 다 지움
+
+        // hover
+        $('#overzone').hover(function(){
+            console.log('enter');
+        }, function(){
+            console.log('out');
+        });
+
+        $('input[type = "text"]').on({
+            focus : function(){
+                console.log('focus');
+                $(this).css({'background-color' : 'pink'});
+            },
+            blur : function(){
+                console.log('blur');
+                $(this).css({'background-color' : 'yellow'});
+            }
+        });
+
+
+
+
+
+    </script>
+</html>

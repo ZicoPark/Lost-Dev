@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dom Script</title>
+        <link rel = "icon" href="../img/chrome.png">
+    </head>
+    <body>
+        <h1 id = "p1"></h1>
+        <img id = "image" src = "../img/img01.jpg"><br/>
+        <input type ="text" value = "아무 내용이나">
+        <a href = "#" my-attr="header"> 링크 클릭</a>
+        <a href = "#" my-attr="main"> 링크 클릭</a>
+        <a href = "#" my-attr="footer"> 링크 클릭</a>
+
+    </body>
+    <script>
+        //my-attr은 1)사용자 속성이다.
+        var elem =document.getElementById('p1');
+        console.log(elem);
+        elem.innerHTML = '새로운 텍스트 등장';
+        elem.style.backgroundColor='yellow';
+
+        var img = document.getElementById('image');
+        //src속성을 바꾸는 방식
+        //img.src='../img/img02.jpg'; // (직접 들어가는법. 쉽지만) 일부 건드릴 수 없는 속성이 있다
+        img.setAttribute('src','../img/img03.jpg'); // 모든 속성을 수정할 수 있다
+        
+        // id를 제외한 나머지는 배열로 담겨서 들어온다. 0쓰는 이유는 배열이 단하나 이기때문
+        var input = document.getElementsByTagName('input');
+        console.log(input[0]);
+        input[0].value = 'click';
+        input[0].setAttribute('type', 'button');
+
+        var tags = document.getElementsByTagName('a');
+        console.log(tags[0]);
+
+        for(var i = 0 ; i<tags.length ; i++){
+            //사용자 속성 가져오기. i쓰는이유는 자동화때문
+            var attr = tags[i].getAttribute('my-attr');
+            console.log(attr);
+            tags[i].innterHTML = '<h1>' + attr.toUpperCase() +'<h1>';
+        }
+
+        // 2)기본속성
+        console.log([elem]);
+
+    </script>
+</html>
