@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table, th, td{
+		border : 1px solid black;
+		border-collapse: collapse;
+	}
+	th,td{
+		padding : 5px 10px;
+	}
+	
+</style>
+</head>
+<body>
+	<h1>회원 정보</h1>
+	<form action = ""  method="get">
+	<table>
+		<tr>
+			<th>이름</th>
+			<td><input type = "text" name="userName"/></td>
+		</tr>
+		<tr>
+			<th>성별</th>
+			<td><input type = "text" name="userName"/></td>
+		</tr>
+		<tr>
+			<th>취미</th>
+			<td><input type = "text" name="userName"/></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

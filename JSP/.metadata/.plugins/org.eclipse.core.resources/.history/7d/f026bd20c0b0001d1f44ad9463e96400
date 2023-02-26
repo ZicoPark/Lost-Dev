@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+	<% // java 로직 영역을 지정해 준다. 영역지정하는게 매우중요.
+	for(int i = 0 ; i<10 ; i++){
+	%>
+		<!--  java의 값을 html에 출력 하고 싶은 경우 -->
+		<li><%=i%></li>
+	<%
+	}
+	%>
+	</ul>
+</body>
+</html>

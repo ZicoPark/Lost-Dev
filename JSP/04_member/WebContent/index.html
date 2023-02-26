@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <style>
+            table, td, th{
+                border:2px solid black;
+                border-collapse: collapse;
+            }
+            th,td{
+                padding: 10px 10px;
+            }
+
+            input[type='text'], input[type='password'],input[type='email']{
+                width: 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>회원가입 페이지</h1>
+        <hr/>
+        <form action = "result.jsp" method="get">
+        <table>
+            
+                   
+            <tbody>
+                
+                <tr>
+                    <th>아이디</th>
+                    <td><input type="text" name="userId" value=""></td>
+                    
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" name="userPw" value=""></td>
+                    
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td><input type="password" name="userPwconfirm" value=""></td>
+                    
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text" name="userName" value=""></td>
+                    
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td><input type="email" name="email" value=""></td>
+                    
+                </tr>
+                <tr>
+                    <th>생년월일</th>
+                    <td>
+                        <select name="year">
+                            <option value="1980">1980</option>
+                            <option value="1981">1981</option>
+                            <option value="1982">1982</option>
+                        </select>
+
+                        <select name="month">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                        </select>
+                        
+                        <select name="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                        </select>
+
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <th>성별</th>
+                    <td>
+                        <input type="radio" name="gender" value="남"> 남자
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" value="여"> 여자</td>
+                    
+                </tr>
+                <tr>
+                    <th>취미</th>
+                    <td>
+                        <input type="checkbox" name="hobby" value="drive"> 드라이브
+                        <input type="checkbox" name="hobby" value="sports"> 스포츠
+                        <input type="checkbox" name="hobby" value="game"> 게임
+                        <input type="checkbox" name="hobby" value="fishing"> 낚시
+                     </td>
+                    
+                </tr>
+                <tr>
+                    <th>나이</th>
+                    <td><input type="number" name="age" min="" max="" value="20"></td>
+                    
+                </tr>
+                <tr>
+                    <th>보안등급</th>
+                    <td><input type="range" name="security" min="0" max="20" step="2" value="0"></td>
+                    
+                </tr>
+                <tr>
+                	<th colspan="2">
+                		<input type="submit" value="회원가입"/>
+                	</th>
+
+            </tbody>
+        </table>
+		</form>
+    </body>
+</html>

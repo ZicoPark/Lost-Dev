@@ -1,0 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class = "header">
+	현재 시간은 00시 00분 00초
+	
+	오전|오후 입니다.
+
+</div>

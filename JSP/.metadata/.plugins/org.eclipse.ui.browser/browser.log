@@ -1,0 +1,24 @@
+
+2월 20, 2023 10:01:59.97 NEW SESSION
+2월 20, 2023 10:01:59.97 [18812:10696:0220/100159.096:ERROR:device_event_log_impl.cc(218)] [10:01:59.096] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 20, 2023 10:01:59.98 [18812:10696:0220/100159.096:ERROR:device_event_log_impl.cc(218)] [10:01:59.097] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 20, 2023 10:01:59.181 [18812:12964:0220/100159.181:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -106
+2월 20, 2023 10:02:28.362 [18812:12964:0220/100228.362:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -106
+2월 20, 2023 10:02:49.338 [18812:12964:0220/100249.338:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+2월 20, 2023 10:02:58.830 [18812:12964:0220/100258.830:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+2월 20, 2023 10:03:06.331 [18812:12964:0220/100306.331:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+2월 20, 2023 10:03:38.749 [18812:12964:0220/100338.749:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -106
+2월 20, 2023 10:03:44.370 [18812:12964:0220/100344.370:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -106
+2월 20, 2023 10:03:47.453 [18812:12964:0220/100347.453:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -106
+2월 20, 2023 10:03:57.973 [18812:12964:0220/100357.973:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+2월 20, 2023 10:04:05.591 [18812:12964:0220/100405.590:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -106
+2월 20, 2023 10:05:59.389 [17852:24904:0220/100559.388:ERROR:device_event_log_impl.cc(218)] [10:05:59.389] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 20, 2023 10:05:59.390 [17852:24904:0220/100559.389:ERROR:device_event_log_impl.cc(218)] [10:05:59.389] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 20, 2023 11:07:06.975 [17852:24904:0220/110706.974:ERROR:device_event_log_impl.cc(218)] [11:07:06.955] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+2월 20, 2023 11:07:07.23 [17852:24904:0220/110707.022:ERROR:device_event_log_impl.cc(218)] [11:07:07.017] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+
+2월 20, 2023 14:06:49.21 NEW SESSION
+2월 20, 2023 14:06:49.21 [22524:26616:0220/140649.019:ERROR:device_event_log_impl.cc(218)] [14:06:49.019] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 20, 2023 14:06:49.22 [22524:26616:0220/140649.020:ERROR:device_event_log_impl.cc(218)] [14:06:49.020] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+2월 20, 2023 15:00:46.80 [22524:26616:0220/150046.079:ERROR:device_event_log_impl.cc(218)] [15:00:46.073] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+2월 20, 2023 15:00:46.115 [22524:26616:0220/150046.113:ERROR:device_event_log_impl.cc(218)] [15:00:46.114] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
