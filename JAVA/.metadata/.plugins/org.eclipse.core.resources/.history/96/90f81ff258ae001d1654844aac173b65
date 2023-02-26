@@ -1,0 +1,15 @@
+package chap04.ex06.overload;
+
+public class NoteBook {
+	
+	// 노트북을 만들때 다음의 경우가 있다
+	// 1. 일단은 만들어 놓는 경우
+	// 2. 모델명을 만들면서 지어주는 경우
+	// 3. 모델명과 가격을 지정하는 경우
+	// 4.
+
+	public NoteBook() { // 생성자
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package chap04.ex09.smember;
+
+public class inner {
+
+	public static void main(String[] args) { // static member
+		
+		// 같은 클래스에서는 그냥 메서드를 호출하면 된다.
+		// 자바스크립트때 function 호출하는것과 유사
+		stMsg("정적 멤버 호출"); 
+		
+		
+	}
+	
+	static void stMsg(String msg) {
+		System.out.println("static member method : " + msg);
+	}
+	
+	void heapMsg(String msg) {
+		System.out.println("member method : " + msg);
+	}
+
+}

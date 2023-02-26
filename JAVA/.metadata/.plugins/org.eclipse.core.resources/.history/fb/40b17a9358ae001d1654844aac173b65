@@ -1,0 +1,9 @@
+package chap04.ex06.overload;
+
+public class NoteBook {
+
+	public NoteBook() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

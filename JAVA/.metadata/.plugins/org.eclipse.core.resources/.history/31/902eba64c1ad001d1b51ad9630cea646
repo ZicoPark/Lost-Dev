@@ -1,0 +1,9 @@
+package chap04.ex05.init;
+
+public class Puppy {
+
+	public Puppy() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

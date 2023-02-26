@@ -1,0 +1,23 @@
+package chap04.ex08.overload;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Calculator cal = new Calculator();
+		//오버로드를 사용하지않으면 더하기 하나를 해도 수많은 이름을 알아야 한다.
+		
+		OverPlus over = new OverPlus();
+		System.out.println(over.plus("a", "b"));
+		
+		
+		String St = cal.Stringplus("abc", "def");
+		int it = cal.intplus(3, 4);
+		String stit = cal.stint("abc", 1);
+		System.out.println(St);
+		System.out.println(it);
+		System.out.println(stit);
+		
+	}
+
+}

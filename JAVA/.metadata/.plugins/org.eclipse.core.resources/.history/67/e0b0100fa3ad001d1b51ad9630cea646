@@ -1,0 +1,13 @@
+
+public class ThreeD {
+
+	public static void main(String[] args) {
+		// 4개 층 4개 호 3개 방
+		String[][][] apt = new String[4][4][3];
+		System.out.println("층 : " + apt.length);
+		System.out.println("호 : " + apt[0].length);
+		System.out.println("방 : " + apt.length);
+
+	}
+
+}

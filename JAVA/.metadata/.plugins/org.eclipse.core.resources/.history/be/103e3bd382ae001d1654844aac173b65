@@ -1,0 +1,15 @@
+package chap04.ex10.readonly;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Person p = new Person("대한민국", "김지훈");
+		System.out.println(p.nation);
+		System.out.println(p.name);
+		System.out.println(p.ssn); //S|F표시 되어있음. static이니까 이렇게 부르지마 라고 노란줄 그어짐
+		System.out.println(Person.ssn);
+
+	}
+
+}

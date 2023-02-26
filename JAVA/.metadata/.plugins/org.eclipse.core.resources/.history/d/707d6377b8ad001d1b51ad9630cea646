@@ -1,0 +1,10 @@
+package chap04.ex02.define;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

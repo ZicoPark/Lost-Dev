@@ -1,0 +1,32 @@
+
+public class ThreeD {
+
+	public static void main(String[] args) {
+		// 4개 층 4개 호 3개 방
+		String[][][] apt = new String[4][4][3];
+		System.out.println("층 : " + apt.length);
+		System.out.println("호 : " + apt[0].length);
+		System.out.println("방 : " + apt[0][0].length);
+		
+//		apt[2][3][2] = "철수의 방";
+//		apt[0][0][0] = "영희의 방";
+		System.out.println(apt[0][0][1]); //null ! =""
+		
+		// "철수의 방" 과 "영희의 방" 을 제외하 나머지 방은 "공실"이라고 값을 넣는다
+		for (int i= 0;  i< apt.length; i++) {
+			for (int j = 0; j < apt[0].length; j++) {
+				for (int k = 0; k < apt[0][0].length; k++) {
+					System.out.println(apt[i][j][k]);					
+					
+					if (i == 2 && j== 3 && k==2) {
+						System.out.println("철수의 방");
+					} else if(i == 0 && j== 0 && k==0) {
+						System.out.println("영희의 방");
+					} else{
+						System.out.println(apt[i][j][k] = "공실");						
+					}					
+				}
+			}
+		}						
+	}
+}

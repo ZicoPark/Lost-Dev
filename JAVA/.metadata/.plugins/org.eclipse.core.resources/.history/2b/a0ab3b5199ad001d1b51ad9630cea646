@@ -1,0 +1,17 @@
+
+public class input {
+
+	public static void main(String[] args) {
+		
+		int[] scores = new int[10];
+		
+		System.out.println("크기 확인 : " + scores.length);
+		
+		// 0번방에 100
+				
+		// 1번방에 50
+		// 2번방에 70
+
+	}
+
+}

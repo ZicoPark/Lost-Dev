@@ -1,0 +1,15 @@
+package chap04.ex03.myapi;
+
+public class Calculator {
+	
+	/**
+	 * 이 메서드는 두개의 정수를 넣으면 합하여 반환하는 메서드 입니다.	
+	 * @param a 정수 형태의 값
+	 * @param b 정수 형태의 값
+	 * @return a 와 b 를 더한 값
+	 */
+	int plus(int a, int b) {
+		return a+b;
+	}
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="chap04.ex02.define.Student"/>
+    <fullyQualifiedTypeName name="chap04.ex04.constr.Robot"/>
+    <fullyQualifiedTypeName name="chap04.ex05.init.Puppy"/>
+    <fullyQualifiedTypeName name="chap04.ex06.overload.NoteBook"/>
+    <fullyQualifiedTypeName name="chap04.ex08.overload.Calculator"/>
+    <fullyQualifiedTypeName name="chap04.ex09.smember.Sub"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.InnerClass"/>
+    <fullyQualifiedTypeName name="chap04.ex09.smember.inner"/>
+    <fullyQualifiedTypeName name="chap04.ex10.readonly.Person"/>
+    <fullyQualifiedTypeName name="chap04.ex11.imp.info"/>
+    <fullyQualifiedTypeName name="chap04.ex08.overload.OverPlus"/>
+    <fullyQualifiedTypeName name="chap04.ex12.prv.Computer"/>
+    <fullyQualifiedTypeName name="jdk.nashorn.internal.runtime.doubleconv.CachedPowers"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,9 @@
+package chap04.ex12.prv;
+
+public class Computer {
+	
+	private boolean power;
+	private int panSpeed;
+	private int temp;
+
+}

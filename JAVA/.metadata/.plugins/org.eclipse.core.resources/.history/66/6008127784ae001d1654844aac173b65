@@ -1,0 +1,15 @@
+package chap04.ex11.imp;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// 같은 패키지는 import 문이 필요없다.
+		Info info = new Info();
+		System.out.println(info.age);
+		System.out.println(info.job);
+		
+
+	}
+
+}

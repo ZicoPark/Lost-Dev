@@ -1,0 +1,17 @@
+
+public class Compare {
+
+	public static void main(String[] args) {
+		
+		int v1 = 1;
+		double v2 = 1.0;
+		String str1 = "JAVA";
+		String str2 = new String("JAVA");
+		String str3 = "JAVA";
+		
+		System.out.println(v1 ==v2);
+		System.out.println(str1 == str2); // Java에서는 문자열 비교를 이렇게 하면 안된다
+		System.out.println(str1.equals(str2)); //true
+		System.out.println(str1 == str3);
+	}
+}

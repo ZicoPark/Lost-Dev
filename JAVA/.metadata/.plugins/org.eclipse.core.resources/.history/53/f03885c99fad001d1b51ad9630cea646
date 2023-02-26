@@ -1,0 +1,15 @@
+
+public class TwoD {
+
+	public static void main(String[] args) {
+		
+		int[][] arr = {
+				{00,01,02,03},
+				{10,11,12,13}
+		};
+		
+		String[][] royal = new String[4][4];
+
+	}
+
+}

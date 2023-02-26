@@ -1,0 +1,19 @@
+package chap04.ex02.define;
+
+// class -> 파스칼 표기법 : 첫글자가 대문자, 나머지는 소문자(Blackcolor) - 예외
+// 나머지 -> 카멜표기법 : 첫글자 외에 의미를 갖는 단어를 대문자 작성(blackColor) - 기본
+// 다른언어들 -> 스네이크 표기법 : 의미를 갖는 단어 앞에 _로 구분(black_color) - 다른언어에서 사용
+
+public class Main { // 클래스
+
+	public static void main(String[] args) { // 메서드
+		//main() 메서드가 없는 클래스는 스스로 동작할 수 없다.
+		
+		Student std = new Student();
+		Student std2 = new Student();
+		
+		// std 와 std2에 담긴 객체(instance)는 복사본이기 때문에 서로 다르다.
+		System.out.println(std); //34c4973
+		System.out.println(std2); //52feb982
+	}
+}

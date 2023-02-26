@@ -1,0 +1,21 @@
+package chap04.ex09.smember;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// 일반적으로 사용 하는 방법(객체화)
+		Sub sub = new Sub();
+		System.out.println("멤버 필드 : " + sub.field);
+		System.out.println("멤버 메서드 : " + sub.multi(3, 4));
+		
+		// static 멤버 사용하는 방법(원본에 직접 접근)
+		System.out.println("static 멤버 필드 : " + Sub.sField);
+		System.out.println("static 멤버 메서드 : " + Sub.minus(10, 5));
+		
+		// 복사본에서 원본 접근이 불가능 한가?
+		System.out.println("static 멤버 메서드 - 복사본에서 접근 : " + sub.plus(10, 5));
+		
+	}
+
+}

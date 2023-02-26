@@ -1,0 +1,18 @@
+
+public class MinMax {
+
+	public static void main(String[] args) {
+		// int만 특이하게 Integer
+		System.out.println("int 최소값 : " + Integer.MIN_VALUE);
+		System.out.println("int 최대값 : " + Integer.MAX_VALUE);
+		
+		System.out.println("long 최소값 : " + Long.MIN_VALUE);
+		System.out.println("long 최대값 : " + Long.MAX_VALUE);
+		
+		System.out.println("float 최소값 : " + Float.MIN_VALUE);
+		System.out.println("float 최대값 : " + Float.MAX_VALUE);
+		
+		System.out.println("double 최소값 : " + Double.MIN_VALUE);
+		System.out.println("double 최대값 : " + Double.MAX_VALUE);
+	}
+}

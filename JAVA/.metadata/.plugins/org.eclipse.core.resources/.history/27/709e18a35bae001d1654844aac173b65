@@ -1,0 +1,9 @@
+package chap04.ex07.member;
+
+public class Car {
+
+	public Car() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

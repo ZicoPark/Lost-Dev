@@ -1,0 +1,17 @@
+
+public class Scope { //class
+	
+	String str = "Some text"; //class 안에서 사용 가능
+
+	public static void main(String[] args) { //method
+		
+		int num = 123; //method 안에서 사용 가능
+		
+		for (int i = 0; i < 3; i++) { //i는 for문 밖을 벗어날 수 없다.
+			int sum = num + i ; // sum은 이 블록을 벗어날 수 없다.
+			System.out.println(sum);
+		}		
+		//System.out.println(sum);
+	}
+
+}

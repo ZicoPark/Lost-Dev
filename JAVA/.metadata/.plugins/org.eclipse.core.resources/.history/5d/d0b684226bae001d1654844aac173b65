@@ -1,0 +1,17 @@
+package chap04.ex09.smember;
+
+public class inner {
+
+	public static void main(String[] args) { // static member
+		
+	}
+	
+	static void stMsg(String msg) {
+		System.out.println("static member method : " + msg);
+	}
+	
+	void heapMsg(String msg) {
+		System.out.println("member method : " + msg);
+	}
+
+}

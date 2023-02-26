@@ -1,0 +1,13 @@
+package chap04.ex07.member;
+
+public class Car {
+	
+	int gear;
+	boolean on;
+
+	public Car() {
+		gear = 0; //this 굳이 쓸 필요까진 없음
+		on = false;
+	}
+
+}

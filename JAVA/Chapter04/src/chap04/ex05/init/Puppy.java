@@ -1,0 +1,17 @@
+package chap04.ex05.init;
+
+public class Puppy {
+	
+	String name;
+	String goal;
+	
+	public Puppy() {
+		
+	}
+
+	public Puppy(String name, String goal) {
+		System.out.println(name + " /" + goal);
+		this.name = name; 
+		this.goal = goal;
+	}
+}

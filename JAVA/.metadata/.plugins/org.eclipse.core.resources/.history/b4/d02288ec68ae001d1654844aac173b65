@@ -1,0 +1,12 @@
+package chap04.ex09.smember;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Sub sub = new Sub();
+		System.out.println("멤버 필드 : " + sub.field);
+		System.out.println("멤버 메서드 : " + sub.multi(3, 4));
+	}
+
+}

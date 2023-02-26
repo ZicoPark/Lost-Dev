@@ -1,0 +1,20 @@
+package chap04.ex08.overload;
+
+public class OverPlus {
+	
+	int plus(int a, int b) {
+		System.out.println(a+b);
+		return a+b;
+	}
+	
+	String plus(String a, String b) {
+		System.out.println(a+b);
+		return a+b;
+	}
+	
+	String plus(String a, int b) {
+		System.out.println(a+b);
+		return a+b;
+	}
+
+}

@@ -1,0 +1,28 @@
+
+public class input {
+
+	public static void main(String[] args) {
+		
+		int[] scores = new int[10];
+		
+		System.out.println("크기 확인 : " + scores.length);
+		
+		// 0번방에 100
+		scores[0] = 100;
+		// 1번방에 50
+		scores[1] = 50;
+		// 2번방에 70
+		scores[2] = 70;
+		
+		// 3~9번방 까지 80씩 넣어보자
+		for (int i = 3; i < scores.length; i++) {
+			scores[i] = 80;
+		}
+		
+		System.out.println(scores[0]);
+		System.out.println(scores[1]);
+		System.out.println(scores[2]);
+		System.out.println(scores[3]);
+		System.out.println(scores[9]);		
+	}
+}

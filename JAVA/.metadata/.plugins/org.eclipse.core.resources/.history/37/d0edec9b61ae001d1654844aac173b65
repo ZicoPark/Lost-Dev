@@ -1,0 +1,13 @@
+package chap04.ex08.overload;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Calculator cal = new Calculator();
+		cal.plus("asd", "qwe");
+		
+
+	}
+
+}

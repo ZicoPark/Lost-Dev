@@ -1,0 +1,13 @@
+
+public class Compare {
+
+	public static void main(String[] args) {
+		
+		int v1 = 1;
+		double v2 = 1.0;
+		String str1 = "JAVA";
+		String str2 = new String("JAVA");
+
+	}
+
+}

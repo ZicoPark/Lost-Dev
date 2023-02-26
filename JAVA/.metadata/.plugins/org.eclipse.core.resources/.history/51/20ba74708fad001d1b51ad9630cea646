@@ -1,0 +1,19 @@
+
+public class MinMax {
+
+	public static void main(String[] args) {
+		System.out.println("int 최소값 : ");
+		System.out.println("int 최대값 : ");
+		
+		System.out.println("long 최소값 : ");
+		System.out.println("long 최대값 : ");
+		
+		System.out.println("float 최소값 : ");
+		System.out.println("float 최대값 : ");
+		
+		System.out.println("double 최소값 : ");
+		System.out.println("double 최대값 : ");
+
+	}
+
+}

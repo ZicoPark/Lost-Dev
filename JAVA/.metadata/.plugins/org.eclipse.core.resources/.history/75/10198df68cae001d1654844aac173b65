@@ -1,0 +1,26 @@
+package chap04.ex12.prv;
+
+public class Computer {
+	
+	private boolean power;
+	private int panSpeed;
+	private int temp;
+	
+	public boolean isPower() {
+		return power;
+	}
+	public void setPower(boolean power) {
+		this.power = power;
+	}
+	public int getTemp() {
+		return temp;
+	}
+	public void setPanSpeed(int panSpeed) {
+		this.panSpeed = panSpeed;
+		// 받아온 팬 속도로 온도를 조절
+		this.temp = 110 - this.panSpeed;
+	}
+	
+
+
+}

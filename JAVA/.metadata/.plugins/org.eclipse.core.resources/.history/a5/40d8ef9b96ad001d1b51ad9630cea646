@@ -1,0 +1,16 @@
+
+public class WhileStmt {
+
+	public static void main(String[] args) {
+		
+		int i = 1;
+		while (true) {
+			i++;
+			System.out.println("영원히 반복 된다.");
+		}
+		
+		int cup = 1; //unreachable code
+
+	}
+
+}

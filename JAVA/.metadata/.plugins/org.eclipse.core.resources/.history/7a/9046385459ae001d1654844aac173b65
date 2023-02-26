@@ -1,0 +1,29 @@
+package chap04.ex06.overload;
+
+public class NoteBook {
+	
+	String name;
+	String color;
+	int price;
+	
+	// 노트북을 만들때 다음의 경우가 있다
+	
+	// 1. 일단은 만들어 놓는 경우
+	public NoteBook() { // 생성자
+		
+	}
+	
+	// 2. 모델명을 만들면서 지어주는 경우
+	public NoteBook(String name) { // 생성자
+		this.name = name;
+		
+	}
+	
+	// 3. 모델명과 가격을 지정하는 경우
+	// 4. 모델명과 색상을 지정하는 경우
+	// 5. 모델명, 색상, 가격을 지정하는 경우
+	
+
+
+
+}

@@ -1,0 +1,33 @@
+
+public class Promotion {
+
+	public static void main(String[] args) {
+		
+		// 묵시적 형변환(Promotion) 작은->큰
+		
+		byte byteVal;
+		char charVal = 'a';
+		
+		int intVal = 0;
+		long longVal;
+		float floatVal;
+		double doubleVal;
+		
+		// byte < int
+		byteVal = 10;
+		intVal = byteVal;
+		
+		// char < int
+		intVal = charVal;
+		System.out.println(intVal);
+		
+		// int < long
+		
+		// float < double
+		
+		
+		
+
+	}
+
+}

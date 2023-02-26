@@ -1,0 +1,15 @@
+
+public class Toaster {
+
+	public static void main(String[] args) { //함수(X) 메서드(O) - 문제를 해결해내가는 방법
+		// 매개변수 : 문자열 배열
+		// 반환값 : 없음		
+	}
+	
+	String toaster(String 빵) {
+		// 매개변수 : 문자열
+		// 반환값 : 문자열
+		return "구워진 빵";
+	}
+
+}

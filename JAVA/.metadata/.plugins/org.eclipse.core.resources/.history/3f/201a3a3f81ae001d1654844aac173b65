@@ -1,0 +1,9 @@
+package chap04.ex10.readonly;
+
+public class Person {
+
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

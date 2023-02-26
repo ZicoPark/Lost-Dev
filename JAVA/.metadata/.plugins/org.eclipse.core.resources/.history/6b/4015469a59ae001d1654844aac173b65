@@ -1,0 +1,45 @@
+package chap04.ex06.overload;
+
+public class NoteBook {
+	
+	String name;
+	String color;
+	int price;
+	
+	// 노트북을 만들때 다음의 경우가 있다
+	
+	// 1. 일단은 만들어 놓는 경우
+	public NoteBook() { // 생성자
+		
+	}
+	
+	// 2. 모델명을 만들면서 지어주는 경우
+	public NoteBook(String name) { // 생성자
+		this.name = name;		
+	}
+	
+	// 3. 모델명과 가격을 지정하는 경우
+	public NoteBook(String name, int price) { // 생성자
+		this.name = name;
+		this.price = price;
+	}
+	
+	// 4. 모델명과 색상을 지정하는 경우 // 개수는 같지만 데이터타입 다르니 가능
+	public NoteBook(String m, String c) { // 생성자
+		// 받아온 변수와 넣을 변수의 이름이 다르면 this가 없어도 된다.
+		name = m;
+		color = c;
+	}
+	
+	// 5. 모델명, 색상, 가격을 지정하는 경우
+	public NoteBook(String name, String color, int price) { // 생성자
+		this.name = name;
+		this.color = color;
+		this.price = price;
+		
+	}
+	
+
+
+
+}

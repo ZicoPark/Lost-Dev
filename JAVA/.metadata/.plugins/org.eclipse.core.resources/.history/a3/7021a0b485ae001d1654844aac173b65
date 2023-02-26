@@ -1,0 +1,17 @@
+package chap04.ex11.imp;
+
+import chap04.ex08.overload.OverPlus;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// 같은 패키지는 import 문이 필요없다.
+		Info info = new Info();
+		System.out.println(info.age);
+		System.out.println(info.job);
+		
+		// 다른패키지의 클래스 호출시 import 문 필요
+		OverPlus over = new OverPlus();
+	}
+}

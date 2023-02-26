@@ -1,0 +1,23 @@
+
+public class Output {
+
+	public static void main(String[] args) {
+		
+		int scores[] = new int[10];
+		
+		scores[0] = 10; //0~9까지 넣어보자 10단위로
+		
+		for (int i = 1; i < scores.length; i++) {
+			scores[i] =10*i;
+			
+		}
+		System.out.println(scores[0]);		
+		System.out.println(scores[1]);
+		System.out.println(scores[2]);
+		System.out.println(scores[3]);
+		System.out.println(scores[4]);
+		
+
+	}
+
+}

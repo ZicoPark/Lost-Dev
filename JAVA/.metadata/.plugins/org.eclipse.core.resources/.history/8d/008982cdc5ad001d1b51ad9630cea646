@@ -1,0 +1,22 @@
+
+public class WhileStmt {
+
+	public static void main(String[] args) {
+		
+		int i = 1;
+		while (true) {
+			i++;
+			System.out.println("영원히 반복 된다.");
+			if(i>=100) {
+				break;
+			}
+		}
+		
+		// unreachable code : 위 구문대로라면 여기까지 코드가 닿지 않는다.
+		// 해결방법1 : 아래 코드를 지운다.
+		// 해결방법2 : 위 반복문이 정지할 수 있는 조건을 만들어준다. if문 추가 작성(10~12줄)
+		int cup = 1; 
+
+	}
+
+}

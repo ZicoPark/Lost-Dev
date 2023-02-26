@@ -1,0 +1,13 @@
+package chap04.ex12.prv;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Computer com = new Computer();
+		// power를 다른 클래스에서 사용하고 싶다면?
+		
+
+	}
+
+}

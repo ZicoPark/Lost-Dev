@@ -1,0 +1,15 @@
+package chap04.ex08.overload;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Calculator cal = new Calculator();
+		String St = cal.Stringplus("abc", "def");
+		int it = cal.intplus(3, 4);
+		System.out.println(St);
+		System.out.println(it);
+		
+	}
+
+}
